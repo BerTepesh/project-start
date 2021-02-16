@@ -1,0 +1,30 @@
+{
+  "name": "project-start",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "@babel/core": "^7.12.16",
+    "@babel/preset-env": "^7.12.16",
+    "browser-sync": "^2.26.14",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-shorthand": "^1.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-twig": "^1.2.0",
+    "node-sass": "^5.0.0",
+    "normalize-scss": "^7.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "gulp start",
+    "build": "gulp build"
+  },
+  "author": "BerTepesh",
+  "license": "MIT"
+}
