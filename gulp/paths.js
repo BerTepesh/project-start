@@ -1,27 +1,26 @@
 module.exports = {
 	build: {
-		html: 		'./build',
-		styles: 	'./build/assets/stylesheets/',
-		// js: 			'/js/',
-		// img: 			'/img/',
-		// sprites: 	'/sprites/',
-		// fonts: 		'/fonts/'
+		html: 		'./public',
+		styles: 	'./public/assets/stylesheets/',
+		scripts: 	'./public/assets/javascripts/',
+		img: 			'./public/assets/images/',
+		icons: 		'./public/assets/images/',
+		fonts: 		'./public/assets//fonts/'
 	},
 	src: {
 		html: 		'src/html/*.twig',
 		sass: 		'src/stylesheets/*.scss',
-		// 'js': 			'src/js/*.js',
-		// 'css': 			'src/style/*.css',
-		// 'img': 			'src/img/**/*.*',
-		// 'sprites': 	'src/sprites/**/*.*',
-		// 'fonts': 		'src/fonts/**/*.*'
+		scripts: 	'src/javascripts/*.js',
+		img: 			'src/images/**/*.{gif,png,jpg,svg,webp}',
+		icons: 		'src/icons/**/*.svg',
+		fonts: 		'src/fonts/**/*.*'
 	},
 	watch: {
 		html: 		'src/html/**/*.twig',
-		styles: 	'src/stylesheet/**/*.scss',
-		// 'js': 			'src/js/**/*.js',
-		// 'img': 			'src/img/**/*.*',
-		// 'sprites': 	'src/sprites/**/*.*',
-		// 'fonts': 		'src/fonts/**/*.*'
+		styles: 	'src/stylesheets/**/*.scss',
+		scripts: 	'src/javascripts/**/*.js',
+		img: 			'src/images/**/*.*',
+		icons: 		'src/icons/**/*.*',
+		fonts: 		'src/fonts/**/*.*'
 	},
 };
