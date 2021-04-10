@@ -1,24 +1,76 @@
 {% extends 'layouts/base.twig' %}
 {% from '/macros/icon.twig' import icon %}
 
-{% block header %}{% endblock %}
+{% set headerAttrs = {
+	'class': 'header_transparent',
+} %}
 
 {% block title %}Page test{% endblock %}
 
 {% block body %}
-    <section data-scroll-section>
-        <div class="container">
-					<div class="test">
-						<h1>Hello world!</h1>
-						<img src="assets/images/landing/intro/3-xl.jpg" alt="">
-						{{ icon('social-youtube' , {'width': 20, 'height': 20}) }}
+		<div class="test">
+			<section class="test__section test__section_1" data-scroll-section>
+				<div class="container">
+					<div class="test__holder">
+						<div class="row">
+							<div class="col-md-5">
+								<h1 class="test__title">Hello world!</h1>
+								<div class="test__img">
+									<img src="assets/images/landing/intro/3-xl.jpg" alt="">
+								</div>
+								{{ icon('social-youtube' , {'width': 20, 'height': 20}) }}
+							</div>
+							<div class="col-md-6 offset-md-1">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a justo aliquet, vulputate ligula at, placerat est. Aenean in orci accumsan, commodo ante a, sodales nibh. Phasellus venenatis eu ipsum non lobortis. Donec vehicula enim a venenatis lacinia. Maecenas et pharetra diam, et imperdiet ante. </p>
+								<p>Aliquam tempus consectetur dui a efficitur. Curabitur efficitur sem ac dignissim vulputate. In vel aliquam lorem. Etiam in nibh elementum, varius velit nec, vehicula purus. Class aptent taciti sociosqu ad </p>
+							</div>
+						</div>
 					</div>
-        </div>
-    </section>
+				</div>
+			</section>
+			<section class="test__section test__section_2" data-scroll-section>
+				<div class="container">
+					<div class="test__holder">
+						<div class="row">
+							<div class="col-md-5">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a justo aliquet, vulputate ligula at, placerat est. Aenean in orci accumsan, commodo ante a, sodales nibh. Phasellus venenatis eu ipsum non lobortis. Donec vehicula enim a venenatis lacinia. Maecenas et pharetra diam, et imperdiet ante. </p>
+								<p>Aliquam tempus consectetur dui a efficitur. Curabitur efficitur sem ac dignissim vulputate. In vel aliquam lorem. Etiam in nibh elementum, varius velit nec, vehicula purus. Class aptent taciti sociosqu ad </p>
+							</div>
+							<div class="col-md-6 offset-md-1">
+								<h2 class="test__title">Section</h2>
+								<div class="test__img">
+									<img src="assets/images/landing/intro/3-xl.jpg" alt="">
+								</div>
+								{{ icon('social-youtube' , {'width': 20, 'height': 20}) }}
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="test__section test__section_3" data-scroll-section>
+				<div class="container">
+					<div class="test__holder">
+						<div class="row">
+							<div class="col-md-5">
+								<h2 class="test__title">Section</h2>
+								<div class="test__img">
+									<img src="assets/images/landing/intro/3-xl.jpg" alt="">
+								</div>
+								{{ icon('social-youtube' , {'width': 20, 'height': 20}) }}
+							</div>
+							<div class="col-md-6 offset-md-1">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a justo aliquet, vulputate ligula at, placerat est. Aenean in orci accumsan, commodo ante a, sodales nibh. Phasellus venenatis eu ipsum non lobortis. Donec vehicula enim a venenatis lacinia. Maecenas et pharetra diam, et imperdiet ante. </p>
+								<p>Aliquam tempus consectetur dui a efficitur. Curabitur efficitur sem ac dignissim vulputate. In vel aliquam lorem. Etiam in nibh elementum, varius velit nec, vehicula purus. Class aptent taciti sociosqu ad </p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
 {% endblock %}
 
 {% block stylesheets %}
-    <link rel="stylesheet" href="/assets/stylesheets/test.css" />
+    <link rel="stylesheet" href="assets/stylesheets/test.css" />
 {% endblock %}
 
 {% block footer %}{% endblock %}

@@ -1,0 +1,145 @@
+.header {
+	z-index: 999;
+	padding: 20px 0;
+	@include media-breakpoint-up(md) {
+		padding: 0;
+	}
+
+	&__holder {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__logo {
+		width: 50px;
+		margin-right: 20px;
+
+		img {
+			max-width: 100%;
+		}
+	}
+
+	&__info {
+		text-align: right;
+		margin-left: 20px;
+		display: none;
+
+		@include media-breakpoint-up(md) {
+			display: block;
+		}
+
+		a {
+			text-decoration: none;
+			color: #000;
+		}
+	}
+}
+
+.header_sticky {
+	transition: all .4s ease-in-out;
+	will-change: transform;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+}
+
+.header_sticky.sticky {
+	opacity: 0;
+	transform: translateY(-70%);
+}
+
+.header_sticky.active {
+	transition: all .4s ease-in-out;
+	opacity: 1;
+	transform: none;
+	background-color: #fff;
+	box-shadow: 0 -5px 10px 5px rgba(0, 0, 0, .2);
+}
+
+.main-nav {
+	flex: 1;
+	display: none;
+	max-width: 600px;
+	@include media-breakpoint-up(md) {
+		display: block;
+	}
+
+	ul {
+		list-style: none;
+		display: flex;
+		justify-content: space-around;
+		padding-left: 0;
+		margin: 0;
+
+		li {
+			padding: 30px 0;
+
+			a {
+				text-decoration: none;
+				color: #000;
+				white-space: nowrap;
+				position: relative;
+				padding: 10px 0;
+
+				&:before {
+					content: '';
+					background-color: #000;
+					opacity: 0;
+					position: absolute;
+					bottom: 0;
+					width: 100%;
+					height: 3px;
+					transition: opacity .3s ease-in-out;
+				}
+
+				&:hover {
+					&:before {
+						opacity: 1;
+					}
+				}
+			}
+
+			&.active a {
+				&:before {
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
+
+.ham-trigger {
+	position: relative;
+	width: 30px;
+	height: 25px;
+	margin-left: 20px;
+
+	@include media-breakpoint-up(md) {
+		display: none;
+	}
+
+	&:before,
+	&:after {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+	}
+
+	&:before {
+		border-top: 3px solid #000;
+		border-bottom: 3px solid #000;
+		border-radius: 3px;
+	}
+
+	&:after {
+		height: 3px;
+		background: #000;
+		top: 0;
+		bottom: 0;
+		margin: auto 0;
+		border-radius: 3px;
+	}
+}

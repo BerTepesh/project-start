@@ -1,0 +1,9 @@
+@font-face {
+    $path-font-face: '/assets/fonts/object-sans/ObjectSans-Regular';
+    font-family: 'Object Sans';
+    src: url('#{$path-font-face}.woff2') format('woff2'), url('#{$path-font-face}.woff') format('woff'), url('#{$path-font-face}.ttf') format('truetype');
+    //src: url('#{$path-font-face}.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

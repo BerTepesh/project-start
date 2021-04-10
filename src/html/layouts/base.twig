@@ -6,25 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
   {% block meta %}{% endblock %}
   <title>{% block title %}Title{% endblock %}</title>
-	<meta name="description" content="{% block description %}{% endblock %}"/>
-
-	{#
-	<link rel="shortcut icon" href="{{ asset("/favicon.ico") }}"/>
-	<link rel="icon" type="image/png" sizes="32x32" href="{{ asset("/assets/manifest/favicon-32x32.png") }}" />
-	<link rel="icon" type="image/png" sizes="16x16" href="{{ asset("/assets/manifest/favicon-16x16.png") }}" />
-	<link rel="apple-touch-icon" href="{{ asset("/assets/manifest/apple-touch-icon.png") }}" />
-	<link rel="mask-icon" href="{{ asset("/assets/manifest/safari-pinned-tab.svg") }}" color="#ffffff" />
-
-	<link rel="manifest" href="{{ asset("/assets/manifest/manifest.webmanifest") }}" />
-	<meta name="theme-color" content="#0275d8" />
-	<meta name="msapplication-config" content="{{ asset("/assets/manifest/browserconfig.xml") }}" />
-
-	
-	{% include "partials/analytics/yandex.twig" %}
-  {% include "partials/analytics/google.twig" %}
-
-	#}
-        
+	<meta name="description" content="{% block description %}{% endblock %}"/>        
 	<script>
 		document.documentElement.classList.remove('no-js');
 		document.documentElement.classList.add('js');
@@ -34,10 +16,10 @@
 			document.documentElement.style.setProperty('--viewport-height-actual', window.innerHeight + 'px');
 		}
 	</script>
-	{#
 	<link rel="stylesheet" href="/assets/stylesheets/global.css" />
+	{% block stylesheets %}{% endblock %}
+	{#
 
-	
 	{% set fontUrl = '' %}
 	<link rel="dns-prefetch" href="https://fonts.googleapis.com">
 	<link rel="dns-prefetch" href="https://fonts.gstatic.com">
@@ -47,13 +29,17 @@
 	<link rel="stylesheet" href="{{ fontUrl }}&display=swap" media="print" onload="this.media='all'" />
 	<noscript><link rel="stylesheet" href="{{ fontUrl }}&display=swap" /></noscript>
 	#}
-
-	{% block stylesheets %}{% endblock %}
 </head>
 <body>
+	
 	<div class="page-content-wrapper js-page-content-wrapper">
+		<script>
+			var test = require('../html/data/header');
+			var qwe = "qwerty";
+		</script>
 		{% block header %}
 			{% include "../partials/header.twig" with { navigation: header.navigation } %}
+				{{ qwe }}
 		{% endblock %}
 
 		{# .js-page-content is used for modal mobile fixes (see modal.js) and smooth scrolling #}
@@ -72,12 +58,5 @@
 	</div>
 
 	<script src="/assets/javascripts/index.js"></script>
-	{#
-	<script src="/assets/javascripts/shared.js"></script>
-
-	{% block javascripts %}
-			<script src="/assets/javascripts/blank.js"></script>
-	{% endblock %}
-	#}
 </body>
 </html>

@@ -12,10 +12,10 @@ module.exports = function styles() {
 	return gulp.src(paths.src.sass)
 		.pipe(plumber())
 		//.pipe(sourcemaps.init())
-		.pipe(sass())
+		.pipe(sass().on('error', sass.logError))
 		.pipe(autoprefixer({
-      cascade: false
-    }))
+				cascade: false
+		}))
 		.pipe(shorthand())
 		// .pipe(cleanCSS({
     //   debug: true,
