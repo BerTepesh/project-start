@@ -1,5 +1,4 @@
 module.exports = {
-    test: 'qwe',
     'header': {
         'navigation': [            
             {

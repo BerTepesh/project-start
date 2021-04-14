@@ -1,7 +1,7 @@
 const paths 				= require('../paths'),
 			gulp 					= require('gulp'),
 			plumber 			= require('gulp-plumber'),
-			twig 					= require('gulp-twig')
+			twig 					= require('gulp-twig');
 
 module.exports = function twig2html(cb) {
 	return gulp.src(paths.src.html)

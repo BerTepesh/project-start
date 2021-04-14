@@ -1,5 +1,15 @@
 .intro {
-	background: red;
-	margin-top: 70px;
-	height: 300px;
+	padding-top: 82px;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: rgb(122, 211, 87);
+	@include media-breakpoint-up(lg) {
+		background: linear-gradient(to bottom, rgb(122, 211, 87), rgb(59, 156, 21));
+	}
+
+	&__holder {
+
+	}
 }

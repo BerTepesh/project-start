@@ -48,8 +48,15 @@ img[draggable="false"] {
     -webkit-user-drag: none;
 }
 
+.page-content-wrapper {
+    min-width: 320px;
+}
+
 .page-content {
     min-height: 100vh;
     min-height: var(--viewport-height);
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
