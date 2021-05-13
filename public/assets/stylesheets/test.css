@@ -1,3 +1,7 @@
+.test {
+  color: #fff;
+}
+
 .test__section {
   display: -webkit-box;
   display: -webkit-flex;
