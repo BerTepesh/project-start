@@ -5891,7 +5891,7 @@ img[draggable="false"] {
 
 @font-face {
   font-family: 'Object Sans';
-  src: url("/assets/fonts/object-sans/ObjectSans-Regular.woff2") format("woff2"), url("/assets/fonts/object-sans/ObjectSans-Regular.woff") format("woff"), url("/assets/fonts/object-sans/ObjectSans-Regular.ttf") format("truetype");
+  src: url("assets/fonts/object-sans/ObjectSans-Regular.woff2") format("woff2"), url("assets/fonts/object-sans/ObjectSans-Regular.woff") format("woff"), url("assets/fonts/object-sans/ObjectSans-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
