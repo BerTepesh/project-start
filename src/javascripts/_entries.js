@@ -1,15 +1,19 @@
 module.exports = {
-    main:    [
-        'common/main',
-    ],
+    // 'main':    [
+    //     'common/main.js',
+    // ],
 
     landing:    [
-        'components/slick',
+        'common/main.js',
+
+        'components/slick.js',
     ],
 
-    test:    [
-        'components/slick',
-        'modules/slider',
+    "test":    [
+        'common/main.js',
+        
+        'components/slick.js',
+        'modules/slider.js',
     ],
 };
  
