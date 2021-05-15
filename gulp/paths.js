@@ -10,7 +10,7 @@ module.exports = {
 	src: {
 		html: 		'src/html/*.twig',
 		sass: 		'src/stylesheets/*.scss',
-		scripts: 	'src/javascripts/index.js',
+		scripts: 	'src/javascripts/',
 		img: 			'src/images/**/*.{gif,png,jpg,svg,webp}',
 		icons: 		'src/icons/**/*.svg',
 		fonts: 		'src/fonts/**/*.*'

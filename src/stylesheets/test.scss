@@ -1,5 +1,7 @@
 @import "imports";
 
+@import "components/slick";
+
 .test {
 	&__section {
 		display: flex;
@@ -14,14 +16,10 @@
 
 		&_1 {
 			padding-top: 122px;
-			//background: #e4e73e;
-			height: 490px;
-			position: relative;
+			position: relative; 
 			@include media-breakpoint-up(md) {
 				padding-top: 82px;
-			}
-			@include media-breakpoint-up(lg) {
-				//background: linear-gradient(to top, #daa969, #e4e73e);
+				height: 550px;
 			}
 		}
 

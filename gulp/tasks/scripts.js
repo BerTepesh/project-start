@@ -1,4 +1,5 @@
 const paths 				= require('../paths'),
+      entries 			= require('../../src/javascripts/_entries'),
 			gulp 					= require('gulp'),
 			plumber 			= require('gulp-plumber'),
 			browserify  	= require('browserify'),
@@ -6,13 +7,21 @@ const paths 				= require('../paths'),
       buffer      	= require('vinyl-buffer'),
       babelify   		= require('babelify');
 
-module.exports = function scripts() {
-	return browserify(paths.src.scripts, { debug: true })
-		.transform(babelify.configure({
-      presets: ["@babel/preset-env"]
+module.exports = function scripts(done) {
+  Object.entries(entries).forEach(entry => {
+    const [key, value] = entry;
+
+    let pathArr = value.map(el=> paths.src.scripts + el);
+    
+    browserify( pathArr, { debug: false })
+    .transform(babelify.configure({
+      presets: ["@babel/preset-env"], 
     }))
     .bundle()
-    .pipe(source('index.js'))
+    .pipe(source(key + '.js'))
     .pipe(buffer())
     .pipe(gulp.dest(paths.build.scripts))
+  });
+  done();
 }
+
