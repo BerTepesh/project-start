@@ -5900,6 +5900,7 @@ img[draggable="false"] {
 .header {
   z-index: 999;
   padding: 20px 0;
+  color: #000;
 }
 
 @media (min-width: 768px) {
@@ -6272,8 +6273,10 @@ img[draggable="false"] {
   text-decoration: none;
 }
 
-.page-content {
-  box-shadow: 3px 0px 5px 0 rgba(0, 0, 0, 0.2);
+@media (min-width: 576px) {
+  .page-content {
+    box-shadow: 3px 0px 5px 0 rgba(0, 0, 0, 0.2);
+  }
 }
 
 .page-content.ham-active {
