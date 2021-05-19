@@ -431,7 +431,7 @@
   line-height: 28px;
   position: relative;
   padding: 30px 35px;
-  margin-bottom: 78px;
+  margin-bottom: 70px;
 }
 
 .preface__caption b {
@@ -518,6 +518,7 @@
   text-decoration: none;
   padding: 12px 50px;
   border-radius: 20px;
+  font-weight: 300;
 }
 
 .preface .button__inner {
