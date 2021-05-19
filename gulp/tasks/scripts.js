@@ -1,18 +1,25 @@
 const paths 				= require('../paths'),
+      entries 			= require('../../src/javascripts/_entries'),
 			gulp 					= require('gulp'),
-			plumber 			= require('gulp-plumber'),
-			browserify  	= require('browserify'),
-			source      	= require('vinyl-source-stream'),
-      buffer      	= require('vinyl-buffer'),
-      babelify   		= require('babelify');
+      webpackStream = require('webpack-stream'),
+      plumber 			= require('gulp-plumber');
 
-module.exports = function scripts() {
-	return browserify(paths.src.scripts, { debug: true })
-		.transform(babelify.configure({
-      presets: ["@babel/preset-env"]
-    }))
-    .bundle()
-    .pipe(source('index.js'))
-    .pipe(buffer())
+module.exports = function scripts(done) {
+  Object.entries(entries).forEach(entry => {
+    const [key, value] = entry;
+
+    let pathArr = value.map(el=> paths.src.scripts + el);
+    
+    webpackStream({
+      entry: pathArr,
+      output: {
+        filename: `${key}.js`
+      },
+      mode: "development",
+    })
+    .pipe(plumber())
     .pipe(gulp.dest(paths.build.scripts))
+  });
+  done();
 }
+

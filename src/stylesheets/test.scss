@@ -1,5 +1,7 @@
 @import "imports";
 
+@import "components/slick";
+
 .test {
 	color: #fff;
 	&__section {
@@ -19,14 +21,10 @@
 
 		&_1 {
 			padding-top: 122px;
-			//background: #e4e73e;
-			height: 490px;
-			position: relative;
+			position: relative; 
 			@include media-breakpoint-up(md) {
 				padding-top: 82px;
-			}
-			@include media-breakpoint-up(lg) {
-				//background: linear-gradient(to top, #daa969, #e4e73e);
+				height: 550px;
 			}
 		}
 
@@ -43,7 +41,7 @@
 				background: linear-gradient(to bottom, rgb(87, 192, 211), rgb(19, 152, 175));
 			}
 		}
-	}
+	} 
 
 	&__canvas {
 		width: 100%; 

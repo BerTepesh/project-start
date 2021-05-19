@@ -296,24 +296,13 @@
 			<section class="test__section test__section_2" data-scroll-section>
 				<div class="container">
 					<div class="test__holder">
-						<div class="row">
-							<div class="col-md-5">
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a justo aliquet, vulputate ligula at, placerat est. Aenean in orci accumsan, commodo ante a, sodales nibh. Phasellus venenatis eu ipsum non lobortis. Donec vehicula enim a venenatis lacinia. Maecenas et pharetra diam, et imperdiet ante. </p>
-								<p>Aliquam tempus consectetur dui a efficitur. Curabitur efficitur sem ac dignissim vulputate. In vel aliquam lorem. Etiam in nibh elementum, varius velit nec, vehicula purus. Class aptent taciti sociosqu ad </p>
-							</div>
-							<div class="col-md-6 offset-md-1">
-								<h2 class="test__title">About Us</h2>
-								<div class="test__img">
-									<img src="assets/images/landing/intro/3-xl.jpg" alt="">
-								</div>
-								{{ icon('social-youtube' , {'width': 20, 'height': 20}) }}
-						<h2 class="test__title">Slider</h2>
-						<div class="slider slider_bottomed test__slider">
+						<div class="slider">
 							<div class="slider__holder" id="slider">
 								<div class="slider__item" style="background-image: url('assets/images/test/3-xl.jpg');"></div>
 								<div class="slider__item" style="background-image: url('assets/images/test/3-xl.jpg');"></div>
 								<div class="slider__item" style="background-image: url('assets/images/test/3-xl.jpg');"></div>
 							</div>
+							<div class="slider__nav"></div>
 						</div>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a justo aliquet, vulputate ligula at, placerat est. Aenean in orci accumsan, commodo ante a, sodales nibh. Phasellus venenatis eu ipsum non lobortis. Donec vehicula enim a venenatis lacinia. Maecenas et pharetra diam, et imperdiet ante. </p>
 					</div>
@@ -326,7 +315,7 @@
 							<div class="col-md-5">
 								<h2 class="test__title">Services</h2>
 								<div class="test__img">
-									<img src="assets/images/landing/intro/3-xl.jpg" alt="">
+									<img src="assets/images/test/3-xl.jpg" alt="">
 								</div>
 								{{ icon('social-youtube' , {'width': 20, 'height': 20}) }}
 							</div>
@@ -349,7 +338,7 @@
 							<div class="col-md-6 offset-md-1">
 								<h2 class="test__title">Test</h2>
 								<div class="test__img">
-									<img src="assets/images/landing/intro/3-xl.jpg" alt="">
+									<img src="assets/images/test/3-xl.jpg" alt="">
 								</div>
 								{{ icon('social-youtube' , {'width': 20, 'height': 20}) }}
 							</div>
@@ -364,7 +353,7 @@
 							<div class="col-md-5">
 								<h2 class="test__title">Contact Us</h2>
 								<div class="test__img">
-									<img src="assets/images/landing/intro/3-xl.jpg" alt="">
+									<img src="assets/images/test/3-xl.jpg" alt="">
 								</div>
 								{{ icon('social-youtube' , {'width': 20, 'height': 20}) }}
 							</div>
@@ -381,4 +370,8 @@
 
 {% block stylesheets %}
     <link rel="stylesheet" href="assets/stylesheets/test.css" />
+{% endblock %}
+
+{% block javascripts %}
+    <script src="assets/javascripts/test.js"></script>
 {% endblock %}
