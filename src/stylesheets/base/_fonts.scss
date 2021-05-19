@@ -1,9 +1,44 @@
 @font-face {
-    $path-font-face: '../fonts/object-sans/ObjectSans-Regular';
-    font-family: 'Object Sans';
-    src: url('#{$path-font-face}.woff2') format('woff2'), url('#{$path-font-face}.woff') format('woff'), url('#{$path-font-face}.ttf') format('truetype');
-    //src: url('#{$path-font-face}.ttf') format('truetype');
+    $path-font-face: '../fonts/Avenir/AvenirRegular/AvenirRegular';
+    font-family: 'Avenir';
+    src: url('#{$path-font-face}.woff') format('woff'), url('#{$path-font-face}.ttf') format('truetype');
     font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    $path-font-face: '../fonts/Avenir/AvenirMedium/AvenirMedium';
+    font-family: 'Avenir';
+    src: url('#{$path-font-face}.woff') format('woff'), url('#{$path-font-face}.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    $path-font-face: '../fonts/Avenir/AvenirMedium/AvenirMediumItalic';
+    font-family: 'Avenir';
+    src: url('#{$path-font-face}.woff') format('woff'), url('#{$path-font-face}.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    $path-font-face: '../fonts/Avenir/AvenirBold/AvenirBold';
+    font-family: 'Avenir';
+    src: url('#{$path-font-face}.woff') format('woff'), url('#{$path-font-face}.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    $path-font-face: '../fonts/Avenir/AvenirHeavy/AvenirHeavy';
+    font-family: 'Avenir';
+    src: url('#{$path-font-face}.woff') format('woff'), url('#{$path-font-face}.ttf') format('truetype');
+    font-weight: 900;
     font-style: normal;
     font-display: swap;
 }
