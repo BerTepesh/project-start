@@ -1,0 +1,33 @@
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.preloader {
+	background-color: rgb(216, 198, 198);
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1000;
+
+	&__loader {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		margin: auto;
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		border: 4px solid rgba(226, 217, 217, 0.1);
+  	border-left-color: #1de40b;
+		animation: spin .8s linear infinite;
+	}
+}

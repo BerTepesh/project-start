@@ -19,7 +19,6 @@
 	}
 
 	@include media-breakpoint-up(sm) {
-		// background: linear-gradient(90deg, rgba(2,0,36,.3) 0%, rgba(255,255,255,0) 5px, rgba(0,212,255,0) 100%);
 		width: 300px;
 		left: auto;
 		text-align: left;
@@ -43,8 +42,11 @@
 }
 
 .page-content {
-	box-shadow: 3px 0px 5px 0 rgba(0, 0, 0, 0.2);
 
+	@include media-breakpoint-up(sm) {
+		box-shadow: 3px 0px 5px 0 rgba(0, 0, 0, 0.2);
+	}
+	
 	&.ham-active {
 		transform: translateX(-100%);
 

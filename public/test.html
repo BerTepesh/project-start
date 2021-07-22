@@ -1,13 +1,78 @@
-{% extends 'layouts/base.twig' %}
-{% from '/macros/icon.twig' import icon %}
+<!DOCTYPE html>
+<html dir="ltr" lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="Author" content=""/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+  
+  <title>Page test</title>
+	<meta name="description" content=""/>        
+	<script>
+		document.documentElement.classList.remove('no-js');
+		document.documentElement.classList.add('js');
 
-{% set headerAttrs = {
-	'class': 'header_transparent',
-} %}
+		if (document.documentElement.style.setProperty) {
+			document.documentElement.style.setProperty('--viewport-height', window.innerHeight + 'px');
+			document.documentElement.style.setProperty('--viewport-height-actual', window.innerHeight + 'px');
+		}
+	</script>
+	<link rel="stylesheet" href="assets/stylesheets/global.css" />
+	
+    <link rel="stylesheet" href="assets/stylesheets/test.css" />
 
-{% block title %}Page test{% endblock %}
+	
+</head>
+<body>
+	<div class="page-content-wrapper js-page-content-wrapper">
+		<div class="preloader">
+	<div class="preloader__loader"></div>
+</div>
+		
+			<header class="header header_sticky">
+	<div class="container">
+			<div class="header__holder">
+				<a href="/" class="header__logo">
+					<img src="assets/images/logo.svg" alt="Project">
+				</a>
+				<nav class="main-nav">
+					<ul>
+						<li><a href="#">Home</a></li>
+						<li><a href="#">About Us</a></li>
+						<li><a href="#">Services</a></li>
+						<li class="active"><a href="test.html">Test</a></li>
+						<li><a href="#">Contact Us</a></li>
+					</ul>
+				</nav>
+				<div class="header__info">
+					<div class="header__phone">+7 9123456789</div>
+					<a href="mailto:project@mail.com">project@mail.com</a>
+				</div>
+				<a href="#" class="ham-trigger"></a>
+			</div>
+	</div>
+</header>
 
-{% block body %}
+
+		
+		
+		<div class="ham-panel">
+	<nav class="ham-panel-nav">
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="#">About Us</a></li>
+			<li><a href="#">Services</a></li>
+			<li class="active"><a href="test.html">Test</a></li>
+			<li><a href="#">Contact Us</a></li>
+		</ul>
+	</nav>
+	<div class="ham-panel__info">
+		<div class="ham-panel__phone">+7 9123456789</div>
+		<a href="mailto:project@mail.com">project@mail.com</a>
+	</div>
+</div>
+		<div class="page-content js-page-content">
+				<main>
+					
 		<div class="test">
 			<section class="test__section preface" style="background-image: url(assets/images/test/back.jpg);" data-scroll-section>
 				<div class="container">
@@ -33,7 +98,7 @@
 						<div class="row">
 							<div class="col-md-5">
 								<div class="test__img">
-									<img src="assets/images/test/3-xl.jpg" alt="">
+									<img src="assets/images/landing/intro/3-xl.jpg" alt="">
 								</div>
 							</div>
 							<div class="col-md-6 offset-md-1 test__content">
@@ -316,7 +381,7 @@
 								<div class="test__img">
 									<img src="assets/images/test/3-xl.jpg" alt="">
 								</div>
-								{{ icon('social-youtube' , {'width': 20, 'height': 20}) }}
+								<svg class="icon icon-social-youtube" width="20" height="20" role="presentation"><use href="assets/images/icons.svg#social-youtube" xlink:href="assets/images/icons.svg#social-youtube"></use></svg>
 							</div>
 							<div class="col-md-6 offset-md-1">
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a justo aliquet, vulputate ligula at, placerat est. Aenean in orci accumsan, commodo ante a, sodales nibh. Phasellus venenatis eu ipsum non lobortis. Donec vehicula enim a venenatis lacinia. Maecenas et pharetra diam, et imperdiet ante. </p>
@@ -339,7 +404,7 @@
 								<div class="test__img">
 									<img src="assets/images/test/3-xl.jpg" alt="">
 								</div>
-								{{ icon('social-youtube' , {'width': 20, 'height': 20}) }}
+								<svg class="icon icon-social-youtube" width="20" height="20" role="presentation"><use href="assets/images/icons.svg#social-youtube" xlink:href="assets/images/icons.svg#social-youtube"></use></svg>
 							</div>
 						</div>
 					</div>
@@ -354,7 +419,7 @@
 								<div class="test__img">
 									<img src="assets/images/test/3-xl.jpg" alt="">
 								</div>
-								{{ icon('social-youtube' , {'width': 20, 'height': 20}) }}
+								<svg class="icon icon-social-youtube" width="20" height="20" role="presentation"><use href="assets/images/icons.svg#social-youtube" xlink:href="assets/images/icons.svg#social-youtube"></use></svg>
 							</div>
 							<div class="col-md-6 offset-md-1">
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a justo aliquet, vulputate ligula at, placerat est. Aenean in orci accumsan, commodo ante a, sodales nibh. Phasellus venenatis eu ipsum non lobortis. Donec vehicula enim a venenatis lacinia. Maecenas et pharetra diam, et imperdiet ante. </p>
@@ -364,20 +429,59 @@
 					</div>
 				</div>
 			</section>
-			<div class="remodal-wrapper remodal-is-opened" style="display: block;">
-				<div class="modal success-modal article-modal remodal remodal-is-initialized remodal-is-opened" data-remodal-id="success-modal" tabindex="-1">
-					<button data-remodal-action="close" class="modal__close"></button>
-					<h3 class="title3 title3_grey modal__title">Вы успешно зарегистрировались</h3>
-					<div class="success-modal__subtitle">на сайте <a href="nevrologia.info">nevrologia.info</a></div>
-					<button data-remodal-action="close" class="btn btn_wide get-article-form__btn">продолжить</button>
-				</div>
 		</div>
-{% endblock %}
 
-{% block stylesheets %}
-    <link rel="stylesheet" href="assets/stylesheets/test.css" />
-{% endblock %}
+				</main>
+				 
+					<footer class="footer">
+	<div class="container">
+			<div class="footer__holder">
+				<a href="/" class="footer__logo">
+					<img src="assets/images/logo.svg" alt="Project">
+				</a>
+				<nav class="footer-nav">
+					<ul>
+						<li><a href="#">Home</a></li>
+						<li><a href="#">About Us</a></li>
+						<li><a href="#">Services</a></li>
+						<li><a href="test.html">Test</a></li>
+						<li><a href="#">Contact Us</a></li>
+					</ul>
+					<ul>
+						<li><a href="#">Home</a></li>
+						<li><a href="#">About Us</a></li>
+						<li><a href="#">Services</a></li>
+						<li><a href="test.html">Test</a></li>
+						<li><a href="#">Contact Us</a></li>
+					</ul>
+					<ul>
+						<li><a href="#">Home</a></li>
+						<li><a href="#">About Us</a></li>
+						<li><a href="#">Services</a></li>
+						<li><a href="test.html">Test</a></li>
+						<li><a href="#">Contact Us</a></li>
+					</ul>
+				</nav>
+				<div class="footer__contacts">
+					<div class="footer__phone">+7 9123456789</div>
+					<a href="mailto:project@mail.com">project@mail.com</a>
+				</div>
+			</div>
+	</div>
+</footer>
 
-{% block javascripts %}
+				
+		</div>
+		<div class="js-modal">
+				
+		</div>
+	</div>
+	
+	
     <script src="assets/javascripts/test.js"></script>
-{% endblock %}
+
+
+	
+	
+</body>
+</html>

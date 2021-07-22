@@ -102,6 +102,10 @@
 .slider {
   position: relative;
   
+  &_bottomed .slider__holder{
+    padding-bottom: 60px;
+  }
+
   .slick-track {
     height: 400px;
   }
@@ -222,4 +226,10 @@
       }
     }
   }
+
+  &_bottomed .slider__nav .slick-arrow{
+    bottom: 60px;
+  }
 }
+
+
