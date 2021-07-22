@@ -3,17 +3,19 @@ module.exports = {
     //     'common/main.js',
     // ],
 
-    landing:    [
+    'landing':    [
         'common/main.js',
 
         'components/slick.js',
+        'modules/preloader.js',
     ],
 
-    "test":    [
+    'test':    [
         'common/main.js',
         
         'components/slick.js',
         'modules/slider.js',
+        'modules/preloader.js',
     ],
 };
  
