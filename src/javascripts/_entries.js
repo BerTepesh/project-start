@@ -15,6 +15,7 @@ module.exports = {
         'components/slick.js',
         'modules/slider.js',
         'modules/preloader.js',
+        'modules/modal.js',
     ],
 };
  
