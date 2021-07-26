@@ -6,7 +6,6 @@ module.exports = {
     'landing':    [
         'common/main.js',
 
-        'components/slick.js',
         'modules/preloader.js',
     ],
 
