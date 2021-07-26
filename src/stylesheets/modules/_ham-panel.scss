@@ -4,9 +4,6 @@
 	top: 0;
 	right: 0;
 	left: 0;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
 	padding: 100px 40px 40px;
 	text-align: center;
 	opacity: 0;
@@ -23,9 +20,19 @@
 		left: auto;
 		text-align: left;
 	}
+
+	&__holder {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: 100%;
+		overflow-y: scroll;
+	}
 }
 
 .ham-panel-nav {
+	margin-bottom: 30px;
+	
 	ul {
 		padding-left: 0;
 		list-style: none;
