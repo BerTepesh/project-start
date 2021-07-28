@@ -8,6 +8,7 @@
     "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean-css": "^4.3.0",
     "gulp-imagemin": "^7.1.0",
     "gulp-plumber": "^1.2.1",
     "gulp-rename": "^2.0.0",
@@ -17,6 +18,7 @@
     "gulp-svgstore": "^7.0.1",
     "gulp-twig": "^1.2.0",
     "jquery": "^3.6.0",
+    "node-sass-tilde-importer": "^1.0.2",
     "normalize-scss": "^7.0.1",
     "sass": "^1.36.0",
     "webpack-stream": "^6.1.2"

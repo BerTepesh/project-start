@@ -4,7 +4,7 @@ $(function(){
 	$('.ham-trigger').click(function(){
 		$(this).toggleClass('active');
 		$('.page-content').toggleClass('ham-active');
-		$('body').toggleClass('fixed');
+		//$('body').toggleClass('fixed');
 		$('.ham-panel').toggleClass('active');
 		return false;
 	});
@@ -17,7 +17,7 @@ $(function(){
 				&& !header.is(e.target) && header.has(e.target).length === 0) { 
 			$('.ham-trigger').removeClass('active');
 			$('.page-content').removeClass('ham-active');
-			$('body').removeClass('fixed');
+			//$('body').removeClass('fixed');
 			$('.ham-panel').removeClass('active');
 			return false;
 		}
