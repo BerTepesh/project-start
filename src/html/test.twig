@@ -21,7 +21,7 @@
 							<b>caption</b>
 						</div>
 						<div class="preface__btn">
-							<a class="button button_size_xs popup-modal" href="#test-modal"><span class="button__inner">ПОДРОБНЕЕ</span></a>
+							<a class="button button_size_xs popup-modal" data-fancybox data-src="#dialog-content" href="#"><span class="button__inner">ПОДРОБНЕЕ</span></a>
 						</div>
 					</div>
 				</div>
@@ -367,7 +367,11 @@
 {% endblock %}
 
 {% block modal %}
-
+<div id="dialog-content" style="display:none;">
+  <h2>Hello, world!</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a justo aliquet, vulputate ligula at, placerat est. Aenean in orci accumsan, commodo ante a, sodales nibh. Phasellus venenatis eu ipsum non lobortis. Donec vehicula enim a venenatis lacinia. Maecenas et pharetra diam, et imperdiet ante. </p>
+	<p>Aliquam tempus consectetur dui a efficitur. Curabitur efficitur sem ac dignissim vulputate. In vel aliquam lorem. Etiam in nibh elementum, varius velit nec, vehicula purus. Class aptent taciti sociosqu ad </p>
+</div>
 {% endblock %}
 
 {% block stylesheets %}

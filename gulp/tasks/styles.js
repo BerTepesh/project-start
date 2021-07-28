@@ -1,7 +1,7 @@
 const paths 				= require('../paths'),
 			gulp 					= require('gulp'),
 			plumber 			= require('gulp-plumber'),
-			sass					= require('gulp-sass'),
+			sass					= require('gulp-sass')(require('sass')),
 			// cleanCSS 			= require('gulp-clean-css'),
 			// sourcemaps 		= require('gulp-sourcemaps'),
 			shorthand 		= require('gulp-shorthand'),
