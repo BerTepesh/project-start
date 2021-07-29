@@ -32,6 +32,17 @@
   	border-left-color: #2b91f1;
 		animation: spin .8s linear infinite;
 	}
+	&.visible {
+		visibility: visible;
+		opacity: 1;
+		transition: opacity .5s linear;
+	}
+	
+	&.hidden {
+		visibility: hidden;
+		opacity: 0;
+		transition: visibility 0s .5s, opacity .5s linear;
+	}
 }
 
 @keyframes gradient {
