@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import slider from 'slick-carousel';
 
 $("#slider").slick({
 	arrows: true,
