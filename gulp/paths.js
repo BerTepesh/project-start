@@ -1,5 +1,6 @@
 module.exports = {
 	build: {
+		static: 	'./public',
 		html: 		'./public',
 		styles: 	'./public/assets/stylesheets/',
 		scripts: 	'./public/assets/javascripts/',
@@ -8,6 +9,7 @@ module.exports = {
 		fonts: 		'./public/assets//fonts/'
 	},
 	src: {
+		static: 	'./src/static/**/*.*',
 		html: 		'./src/html/*.twig',
 		sass: 		'./src/stylesheets/*.scss',
 		scripts: 	'./src/javascripts/',
@@ -16,6 +18,7 @@ module.exports = {
 		fonts: 		'./src/fonts/**/*.*'
 	},
 	watch: {
+		static: 	'./src/static/**/*.*',
 		html: 		'./src/html/**/*.twig',
 		styles: 	'./src/stylesheets/**/*.scss',
 		scripts: 	'./src/javascripts/**/*.js',

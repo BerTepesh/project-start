@@ -5,6 +5,7 @@ const gulp 							= require('gulp'),
 			images	 					= require('./gulp/tasks/images')
 			icons	 						= require('./gulp/tasks/icons')
 			fonts	 						= require('./gulp/tasks/fonts')
+			static	 					= require('./gulp/tasks/static')
 			serve	 						= require('./gulp/tasks/serve')
 			clean 						= require('./gulp/tasks/clean')
 
@@ -15,7 +16,7 @@ function setMode(isProduction = false) {
 	}
 }
 
-const dev = gulp.parallel(twig2html, styles, scripts, fonts, images, icons)
+const dev = gulp.parallel(twig2html, static, styles, scripts, fonts, images, icons)
 
 const build = gulp.series(clean, dev)
 

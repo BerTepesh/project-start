@@ -9,7 +9,7 @@
 
 {% block body %}
 		<div class="test">
-			<section class="test__section preface" style="background-image: url(assets/images/test/back.jpg);" data-scroll-section>
+			<section class="test__section preface lazyload" data-src="assets/images/test/back.jpg" data-scroll-section>
 				<div class="container">
 					<div class="preface__holder">
 						<h1 class="preface__title">Test</h1>
@@ -33,7 +33,7 @@
 						<div class="row">
 							<div class="col-md-5">
 								<div class="test__img">
-									<img src="assets/images/test/3-xl.jpg" alt="">
+									<img data-src="assets/images/test/3-xl.jpg" class="lazyload" alt="">
 								</div>
 							</div>
 							<div class="col-md-6 offset-md-1 test__content">
@@ -314,7 +314,7 @@
 							<div class="col-md-5">
 								<h2 class="test__title">Services</h2>
 								<div class="test__img">
-									<img src="assets/images/test/3-xl.jpg" alt="">
+									<img data-src="assets/images/test/3-xl.jpg" class="lazyload" alt="">
 								</div>
 								{{ icon('social-youtube' , {'width': 20, 'height': 20}) }}
 							</div>
@@ -337,7 +337,7 @@
 							<div class="col-md-6 offset-md-1">
 								<h2 class="test__title">Test</h2>
 								<div class="test__img">
-									<img src="assets/images/test/3-xl.jpg" alt="">
+									<img data-src="assets/images/test/3-xl.jpg" class="lazyload" alt="">
 								</div>
 								{{ icon('social-youtube' , {'width': 20, 'height': 20}) }}
 							</div>
@@ -352,7 +352,7 @@
 							<div class="col-md-5">
 								<h2 class="test__title">Contact Us</h2>
 								<div class="test__img">
-									<img src="assets/images/test/3-xl.jpg" alt="">
+									<img class="lazyload" data-src="assets/images/test/3-xl.jpg" alt="">
 								</div>
 								{{ icon('social-youtube' , {'width': 20, 'height': 20}) }}
 							</div>
