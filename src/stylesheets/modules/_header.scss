@@ -17,7 +17,7 @@
 		width: 50px;
 		margin-right: 20px;
 
-		img {
+		svg {
 			max-width: 100%;
 		}
 	}
@@ -34,6 +34,94 @@
 		a {
 			text-decoration: none;
 			color: #000;
+		}
+	}
+	&_light &__logo {
+		color: #fff;
+	}
+
+	&_light.active &__logo {
+		color: #000;
+	}
+
+	&_light &__info {
+		a {
+			color: #fff;
+		}
+	}
+
+	&_light.active &__info {
+		a {
+			color: #000;
+		}
+	}
+
+	&_light .main-nav {
+		ul {
+			li {
+				a {
+					color: #fff;
+
+					&:before {
+						background-color: #fff;
+					}
+				}
+			}
+		}
+	}
+
+	&_light.active .main-nav {
+		ul {
+			li {
+				a {
+					color: #000;
+
+					&:before {
+						background-color: #000;
+					}
+				}
+			}
+		}
+	}
+
+	&_light &__phone {
+		color: #fff;
+	}
+
+	&_light.active &__phone {
+		color: #000;
+	}
+
+	&_light .ham-trigger {
+		&:before {
+			border-top-color: #fff;
+			border-bottom-color:  #fff;
+		}
+	
+		&:after {
+			background: #fff;
+		}
+
+		&.active {
+			&:before {
+				border-top-color: #000;
+				border-bottom-color:  #000;
+			}
+		
+			&:after {
+				background: #000;
+			}
+		}
+	}
+
+	&_light.active .ham-trigger {
+		&:before {
+			border-top-color: #000;
+			border-bottom-color:  #000;
+		}
+	
+		&:after {
+			background: #000;
 		}
 	}
 }

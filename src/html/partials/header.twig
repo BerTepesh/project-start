@@ -1,8 +1,10 @@
-<header class="header header_sticky">
+{% from '../macros/icon.twig' import icon %}
+
+<header class="header header_sticky {{ headerAttrs.class|default('') }}">
 	<div class="container">
 			<div class="header__holder">
 				<a href="/" class="header__logo">
-					<img src="assets/images/logo.svg" alt="Project">
+					{{ icon('logo' , {'width': 50, 'height': 50}) }}
 				</a>
 				<nav class="main-nav">
 					<ul>

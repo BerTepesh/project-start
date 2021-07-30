@@ -26,10 +26,15 @@ body {
     font-size: 1.6rem;
     line-height: 22 / 16 * 1em;
     font-weight: normal;
+    fill: currentColor;
 
     &.fixed {
         overflow-y: hidden;
     }
+}
+
+svg {
+    fill: currentColor;
 }
 
 h1,

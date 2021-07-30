@@ -28,27 +28,15 @@
 	</script>
 	<link rel="stylesheet" href="assets/stylesheets/global.min.css" />
 	{% block stylesheets %}{% endblock %}
-	{#
-
-	{% set fontUrl = '' %}
-	<link rel="dns-prefetch" href="https://fonts.googleapis.com">
-	<link rel="dns-prefetch" href="https://fonts.gstatic.com">
-	<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link rel="preload" as="style" href="{{ fontUrl }}&display=swap" />
-	<link rel="stylesheet" href="{{ fontUrl }}&display=swap" media="print" onload="this.media='all'" />
-	<noscript><link rel="stylesheet" href="{{ fontUrl }}&display=swap" /></noscript>
-	#}
 </head>
 <body>
-	<div class="page-content-wrapper js-page-content-wrapper">
+	<div class="page-content-wrapper">
 		{% include "../partials/preloader.twig" %}
 		{% block header %}
 			{% include "../partials/header.twig" with { navigation: header.navigation } %}
 		{% endblock %}
-		{# .js-page-content is used for modal mobile fixes (see modal.js) and smooth scrolling #}
 		{% include "../partials/ham-panel.twig" %}
-		<div class="page-content js-page-content">
+		<div class="page-content">
 				<main>
 					{% block body %}{% endblock %}
 				</main>
@@ -62,8 +50,5 @@
 	</div>
 	
 	{% block javascripts %}{% endblock %}
-
-	{# <script src="assets/javascripts/svg4everybody.js"></script>#}
-	{# <script>svg4everybody();</script> #}
 </body>
 </html>

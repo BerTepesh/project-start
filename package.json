@@ -23,6 +23,7 @@
     "normalize-scss": "^7.0.1",
     "sass": "^1.36.0",
     "slick-carousel": "^1.8.1",
+    "svg4everybody": "^2.1.9",
     "webpack-stream": "^6.1.2"
   },
   "devDependencies": {},

@@ -5,10 +5,7 @@ module.exports = {
 
     'landing':    [
         'common/main.js',
-
-        
-        'modules/lazy.js',
-        'modules/preloader.js',
+          
     ],
 
     'test':    [
@@ -16,8 +13,6 @@ module.exports = {
         
         'modules/test/test-slider.js',
         'modules/modal.js',
-        'modules/lazy.js',
-        'modules/preloader.js',
     ],
 };
  
