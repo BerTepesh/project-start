@@ -33,7 +33,7 @@
 						<div class="row">
 							<div class="col-md-5">
 								<div class="test__img">
-									<img class="lazyload" data-src="assets/images/test/1-xs.jpg" data-srcset="assets/images/test/1-xs.jpg 576w, assets/images/test/1-sm.jpg 768w, assets/images/test/1-md.jpg 992w, assets/images/test/1-lg.jpg 1200w" alt="">
+									<img class="lazyload" data-src="assets/images/test/1-xl.jpg" alt="Section1">
 								</div>
 							</div>
 							<div class="col-md-6 offset-md-1 test__content">
@@ -314,7 +314,7 @@
 							<div class="col-md-5">
 								<h2 class="test__title">Services</h2>
 								<div class="test__img">
-									<img class="lazyload" data-src="assets/images/test/3-xs.jpg" data-srcset="assets/images/test/3-xs.jpg 576w, assets/images/test/3-sm.jpg 768w, assets/images/test/3-md.jpg 992w, assets/images/test/3-lg.jpg 1200w" alt="">
+									<img class="lazyload" data-src="assets/images/test/3-xl.jpg" alt="Section3">
 								</div>
 								{{ icon('social-youtube' , {'width': 20, 'height': 20}) }}
 							</div>
@@ -337,7 +337,7 @@
 							<div class="col-md-6 offset-md-1">
 								<h2 class="test__title">Test</h2>
 								<div class="test__img">
-									<img class="lazyload" data-src="assets/images/test/4-xs.jpg" data-srcset="assets/images/test/4-xs.jpg 576w, assets/images/test/4-sm.jpg 768w, assets/images/test/4-md.jpg 992w, assets/images/test/4-lg.jpg 1200w" alt="">
+									<img class="lazyload" data-src="assets/images/test/4-xl.jpg" alt="Section4">
 								</div>
 								{{ icon('social-youtube' , {'width': 20, 'height': 20}) }}
 							</div>
@@ -352,7 +352,27 @@
 							<div class="col-md-5">
 								<h2 class="test__title">Contact Us</h2>
 								<div class="test__img">
-									<img class="lazyload" data-src="assets/images/test/5-xs.jpg" data-srcset="assets/images/test/5-xs.jpg 576w, assets/images/test/5-sm.jpg 768w, assets/images/test/5-md.jpg 992w, assets/images/test/5-lg.jpg 1200w" alt="">
+									<picture>
+										<source
+											data-srcset="assets/images/test/5-xs.jpg 240w "
+											media="(max-width: 576px)" />
+										<source
+												data-srcset="assets/images/test/5-sm.jpg 576w"
+												media="(max-width: 768px)" />
+										<source
+												data-srcset="assets/images/test/5-md.jpg 768w"
+												media="(max-width: 992px)" />
+										<source
+												data-srcset="assets/images/test/5-lg.jpg 992w"
+												media="(max-width: 1200px)" />
+										<source
+												data-srcset="assets/images/test/5-xl.jpg 1200w" />
+									<img
+											src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+											data-src="assets/images/test/5-sm.jpg"
+											class="lazyload"
+											alt="Section5" />
+									</picture>
 								</div>
 								{{ icon('social-youtube' , {'width': 20, 'height': 20}) }}
 							</div>
