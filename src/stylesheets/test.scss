@@ -32,7 +32,8 @@
 			}
 		}
 
-		&_2 {
+		&_2,
+		&_5 {
 			background-color: rgb(122, 211, 87);
 			@include media-breakpoint-up(lg) {
 				background: linear-gradient(to bottom, rgb(122, 211, 87), rgb(59, 156, 21));
@@ -45,6 +46,14 @@
 				background: linear-gradient(to bottom, rgb(87, 192, 211), rgb(19, 152, 175));
 			}
 		}
+
+		&_4 {
+			background-color: rgb(87, 192, 211);
+			@include media-breakpoint-up(lg) {
+				background: linear-gradient(to bottom, rgb(186, 140, 201), rgb(192, 66, 186));
+			}
+		}
+		
 	} 
 
 	&__canvas {
