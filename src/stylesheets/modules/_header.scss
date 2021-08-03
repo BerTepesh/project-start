@@ -16,6 +16,8 @@
 	&__logo {
 		width: 50px;
 		margin-right: 20px;
+		color: #000;
+		transition: color .3s ease-in-out;
 
 		svg {
 			max-width: 100%;
@@ -37,7 +39,20 @@
 		}
 	}
 	&_light &__logo {
+		@include media-breakpoint-up(sm) {
+			color: #fff;
+		}
+	}
+
+	&_light &__logo {
 		color: #fff;
+	}
+
+	&_light.hamed &__logo {
+		color: #000;
+		@include media-breakpoint-up(sm) {
+			color: #fff;
+		}
 	}
 
 	&_light.active &__logo {
@@ -51,7 +66,7 @@
 	}
 
 	&_light.active &__info {
-		a {
+		a, span {
 			color: #000;
 		}
 	}
@@ -63,7 +78,7 @@
 					border-top-color: #fff;
 				}
 
-				a {
+				a, span {
 					color: #fff;
 
 					&:before {
@@ -81,7 +96,7 @@
 					border-top-color: #000;
 				}
 
-				a {
+				a, span {
 					color: #000;
 
 					&:before {
@@ -197,7 +212,8 @@
 				}
 			}
 
-			& > a {
+			& > a,
+			& > span {
 				text-decoration: none;
 				color: #000;
 				white-space: nowrap;

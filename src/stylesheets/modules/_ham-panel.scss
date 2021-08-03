@@ -4,8 +4,7 @@
 	top: 0;
 	right: 0;
 	left: 0;
-	padding: 100px 40px 40px;
-	text-align: center;
+	padding: 100px 0 40px;
 	opacity: 0;
 	transform: translateX(200px);
 	transition: all .65s ease-in-out; 
@@ -18,7 +17,6 @@
 	@include media-breakpoint-up(sm) {
 		width: 300px;
 		left: auto;
-		text-align: left;
 	}
 
 	&__holder {
@@ -28,21 +26,85 @@
 		height: 100%;
 		overflow-y: scroll;
 	}
+
+	&__info {
+		padding: 0 40px;
+		text-align: center;
+	}
 }
 
 .ham-panel-nav {
 	margin-bottom: 30px;
 	
-	ul {
+	& > ul {
 		padding-left: 0;
 		list-style: none;
-
-		li {
-			margin-bottom: 15px;
-
-			a {
+		
+		& > li {	
+			margin-bottom: 10px;
+			
+			& > a,
+			& > span {
 				color: #000;
+				padding: 10px 40px;
 				text-decoration: none;
+				display: block;
+			}
+			
+			&.active a {
+				background-color: rgba(131, 131, 131, .2);
+			}
+
+			&.has-children > a,
+			&.has-children > span {
+				padding-right: 60px;
+				position: relative;
+
+				&:before {
+					content: '';
+					border: 7px solid transparent;
+					border-top-color: #000;
+					position: absolute;
+					right: 20px;
+					top: 8px;
+					bottom: 0;
+					margin: auto 0;
+					width: 0;
+					height: 0;
+				}
+			}
+
+			&.droped.has-children > a,
+			&.droped.has-children > span {
+				&:before {
+					transform: rotate(180deg);
+					transform-origin: 50% 25%;
+				}
+			}
+		}
+	}
+
+	.sub-nav {
+		overflow: hidden;
+		position: relative;
+		display: none;
+		
+		ul {
+			list-style: none;
+			margin: 5px 0 0 0;
+			padding-left: 0;
+			overflow: hidden;
+			transition: all .5s ease-out;
+
+			li {
+				margin-bottom: 10px;
+				padding-left: 55px;
+
+				a {
+					text-decoration: none;
+					font-size: 14px;
+					color: #000;
+				}
 			}
 		}
 	}
