@@ -52,6 +52,7 @@
 			}
 			
 			&.active a {
+				pointer-events: none;
 				background-color: rgba(131, 131, 131, .2);
 			}
 

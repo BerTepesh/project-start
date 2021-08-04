@@ -243,11 +243,15 @@
 				}
 			}
 
-			&.active > a {
-				&:before {
-					opacity: 1;
+			&.active {
+				pointer-events: none;
+
+				& > a {
+					&:before {
+						opacity: 1;
+					}
 				}
-			}
+			} 
 
 			&:hover .sub-nav {
 				opacity: 1;
