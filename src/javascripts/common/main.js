@@ -9,6 +9,7 @@ import "lazysizes/plugins/unveilhooks/ls.unveilhooks"
 import '../modules/sticky-header';
 import '../modules/ham-panel';
 import '../modules/preloader';
+import '../modules/smooth-scroll';
 
 $(function() {
 	svg4everybody();

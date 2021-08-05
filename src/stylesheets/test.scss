@@ -48,7 +48,7 @@
 		}
 
 		&_4 {
-			background-color: rgb(87, 192, 211);
+			background-color: rgb(186, 140, 201);
 			@include media-breakpoint-up(lg) {
 				background: linear-gradient(to bottom, rgb(186, 140, 201), rgb(192, 66, 186));
 			}
@@ -252,6 +252,7 @@
 		padding: 12px 50px;
     border-radius: 20px;
 		font-weight: 300;
+		cursor: pointer;
 
 		&__inner {
 			display: -webkit-box;
