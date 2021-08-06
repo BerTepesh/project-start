@@ -297,11 +297,19 @@
 			<section id="section2" class="test__section test__section_2">
 				<div class="container">
 					<div class="test__holder">
-						<div class="slider slider_bottomed">
-							<div class="slider__holder" id="slider">
+						<div class="slider slider_bottomed" data-plugin="testSlider">
+							<div class="slider__holder">
+								<div class="slider__item" style="background-image: url('assets/images/test/4-xl.jpg');"></div>
+								<div class="slider__item" style="background-image: url('assets/images/test/5-xl.jpg');"></div>
+								<div class="slider__item" style="background-image: url('assets/images/test/3-xl.jpg');"></div>
+							</div>
+							<div class="slider__nav"></div>
+						</div>
+						<div class="slider" data-plugin="testSlider" data-test-slider-arrows="false" data-test-slider-dots="false">
+							<div class="slider__holder">
+								<div class="slider__item" style="background-image: url('assets/images/test/3-xl.jpg');"></div>
 								<div class="slider__item" style="background-image: url('assets/images/test/2-xl.jpg');"></div>
-								<div class="slider__item" style="background-image: url('assets/images/test/2-xl.jpg');"></div>
-								<div class="slider__item" style="background-image: url('assets/images/test/2-xl.jpg');"></div>
+								<div class="slider__item" style="background-image: url('assets/images/test/1-xl.jpg');"></div>
 							</div>
 							<div class="slider__nav"></div>
 						</div>

@@ -25,12 +25,6 @@ $(function(){
 		}
 	});
 
-	// $('.ham-panel-nav li.has-children').click(function(){
-	// 	$('.ham-panel-nav').find('li.has-children').not(this).removeClass('droped');
-	// 	$(this).toggleClass('droped');
-	// 	return false;
-	// });
-
 	$('.ham-panel-nav li.has-children span').click(function() {
 		var submenu = $(this).closest('li').children('.sub-nav');
 		if ( $(submenu).is(':hidden') ) {

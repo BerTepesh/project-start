@@ -1,5 +1,6 @@
 import $ from 'jquery';
 
+import 'jquery-app';
 import svg4everybody from 'svg4everybody';
 import 'lazysizes';
 
@@ -12,6 +13,7 @@ import '../modules/preloader';
 import '../modules/smooth-scroll';
 
 $(function() {
+	$('body').app();
 	svg4everybody();
 });
 
