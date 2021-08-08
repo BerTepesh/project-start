@@ -7,10 +7,12 @@ import 'lazysizes';
 import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 import "lazysizes/plugins/unveilhooks/ls.unveilhooks"
 
-import '../components/sticky-header';
-import '../components/ham-panel';
-import '../components/preloader';
-import '../components/smooth-scroll';
+import '../modules/preloader';
+import '../modules/sticky-header';
+import '../modules/ham-panel';
+import '../modules/smooth-scroll';
+import '../modules/modal';
+
 
 $(function() {
 	$('body').app();

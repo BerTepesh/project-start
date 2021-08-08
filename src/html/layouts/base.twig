@@ -29,9 +29,8 @@
 	<link rel="stylesheet" href="assets/stylesheets/global.min.css" />
 	{% block stylesheets %}{% endblock %}
 </head>
-<body>
+<body data-preload>
 	<div class="page-content-wrapper">
-		{% include "../partials/preloader.twig" %}
 		{% block header %}
 			{% include "../partials/header.twig" with { navigation: header.navigation } %}
 		{% endblock %}
