@@ -10,9 +10,10 @@ module.exports = {
 
     'test':    [
         'common/main.js',
-        
+
+        'components/modal.js',
+                
         'modules/test/test-slider.js',
-        'modules/modal.js',
     ],
 };
  

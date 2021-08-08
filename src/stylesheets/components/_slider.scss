@@ -99,11 +99,7 @@
 
 .slider {
 	position: relative;
-	margin-bottom: 20px;
-
-	&_bottomed .slider__holder{
-		padding-bottom: 60px;
-	}
+	margin-bottom: 30px;
 
 	.slick-track {
 
@@ -111,7 +107,6 @@
 
 	&__item {
 		width: 100%;
-		
 		background-size: cover;
 		background-position: center bottom;
 		background-repeat: no-repeat;
@@ -179,10 +174,10 @@
 		padding-left: 0;
 		margin: 0;
 		position: absolute;
-		margin-top: 20px;
 		display: flex;
 		justify-content: center;
 		width: 100%;
+		bottom: 20px;
 
 		li {
 			margin: 0 10px;
@@ -224,9 +219,5 @@
 				display: none;
 			}
 		}
-	}
-
-	&_bottomed .slider__nav .slick-arrow{
-		bottom: 60px;
 	}
 }
