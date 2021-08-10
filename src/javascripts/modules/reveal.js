@@ -11,8 +11,9 @@ class Reveal {
 			'offset': $(window).height() / 6,
 			'delay': 100,
 			'fadeIn': true,
+			'slideIn': true,
 			'duration': 700,
-			'direction': {x: 100, y: 100}
+			'distance': {x: 0, y: -100}
 		});
 	}
 
@@ -23,9 +24,10 @@ class Reveal {
 		if(options.fadeIn) {
 			$container.css({opacity: 0});
 		}
-
-		$container.css({translate: [-options.direction.x, -options.direction.y]});
-
+		if(options.slideIn) {
+			$container.css({translate: [-options.distance.x, -options.distance.y]});
+		}
+		
 		$container.appear(function(){
 
 			let interval = setTimeout(() => {
