@@ -211,7 +211,7 @@
 
 					// stores whether we're interpolating colors
 					// from palette 0 -> 1 (1) or 1 -> 0 (-1)
-					let prevDirection = 1;
+					let prevtransform = 1;
 
 					const updatePalette = t => {
 						const timeScale = 0.0002;
@@ -220,13 +220,13 @@
 						// normalized value 0..1 used to interpolate palette colors
 						const inter = (Math.cos(x) + 1) / 2;
 
-						// did we switch direction, and should ergo pick a new palette
+						// did we switch transform, and should ergo pick a new palette
 						// random palette to interpolate towards?
 
-						const direction = -Math.sin(x) >= 0 ? 1 : -1;
-						if (prevDirection != direction) {
-							prevDirection = direction;
-							if (direction == -1) {
+						const transform = -Math.sin(x) >= 0 ? 1 : -1;
+						if (prevtransform != transform) {
+							prevtransform = transform;
+							if (transform == -1) {
 								palettes[0] = makeRandomPalette();
 							} else {
 								palettes[1] = makeRandomPalette();
@@ -319,18 +319,18 @@
 			</section>
 			<section data-scroll-target="#section3" class="test__section test__section_3">
 				<div class="container">
-					<div class="test__holder" data-reveal-group data-reveal-group-delay="200">
+					<div class="test__holder" data-reveal-group data-reveal-group-delay="100">
 						<div class="row">
 							<div class="col-md-5">
-								<h2 class="test__title" data-reveal data-reveal-direction='{"x": 0, "y": 100}'>Services</h2>
+								<h2 class="test__title" data-reveal data-reveal-transform='{"x": 0, "y": 100}'>Services</h2>
 								<div data-reveal data-reveal-delay="200" class="test__img">
 									<img class="lazyload" data-src="assets/images/test/3-xl.jpg" alt="Section3">
 								</div>
 								{{ icon('social-youtube' , {'width': 20, 'height': 20}) }}
 							</div>
 							<div class="col-md-6 offset-md-1">
-								<p data-reveal data-reveal-delay="500" data-reveal-direction='{"x": -100, "y": 100}'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a justo aliquet, vulputate ligula at, placerat est. Aenean in orci accumsan, commodo ante a, sodales nibh. Phasellus venenatis eu ipsum non lobortis. Donec vehicula enim a venenatis lacinia. Maecenas et pharetra diam, et imperdiet ante. </p>
-								<p data-reveal data-reveal-delay="700" data-reveal-direction='{"x": -100, "y": -100}'>Aliquam tempus consectetur dui a efficitur. Curabitur efficitur sem ac dignissim vulputate. In vel aliquam lorem. Etiam in nibh elementum, varius velit nec, vehicula purus. Class aptent taciti sociosqu ad </p>
+								<p data-reveal data-reveal-delay="500" data-reveal-transform='{"x": -100, "y": 100, "rotate": -20}'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a justo aliquet, vulputate ligula at, placerat est. Aenean in orci accumsan, commodo ante a, sodales nibh. Phasellus venenatis eu ipsum non lobortis. Donec vehicula enim a venenatis lacinia. Maecenas et pharetra diam, et imperdiet ante. </p>
+								<p data-reveal data-reveal-delay="700" data-reveal-transform='{"x": -100, "y": -100}'>Aliquam tempus consectetur dui a efficitur. Curabitur efficitur sem ac dignissim vulputate. In vel aliquam lorem. Etiam in nibh elementum, varius velit nec, vehicula purus. Class aptent taciti sociosqu ad </p>
 							</div>
 						</div>
 					</div>
@@ -340,7 +340,7 @@
 				<div class="container">
 					<div class="test__holder">
 						<div class="row">
-							<div class="col-md-5">
+							<div data-reveal class="col-md-5">
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a justo aliquet, vulputate ligula at, placerat est. Aenean in orci accumsan, commodo ante a, sodales nibh. Phasellus venenatis eu ipsum non lobortis. Donec vehicula enim a venenatis lacinia. Maecenas et pharetra diam, et imperdiet ante. </p>
 								<p>Aliquam tempus consectetur dui a efficitur. Curabitur efficitur sem ac dignissim vulputate. In vel aliquam lorem. Etiam in nibh elementum, varius velit nec, vehicula purus. Class aptent taciti sociosqu ad </p>
 							</div>

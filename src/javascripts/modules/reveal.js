@@ -14,8 +14,8 @@ class Reveal {
 			'delay': 0,
 			'fadeIn': true,
 			'slide': true,
-			'duration': 700,
-			'direction': {x: 0, y: -100}
+			'duration': 900,
+			'transform': {x: 0, y: -100, rotate: 0}
 		});
 	}
 
@@ -51,13 +51,13 @@ class Reveal {
 		$elements.each((_index, element) => {			
 			const fadeIn = getAttributeValue($(element), 'data-reveal-fade-in', this.options.fadeIn);
 			const slide = getAttributeValue($(element), 'data-reveal-slide', this.options.slide);
-			const direction = $.extend({}, this.options.direction, $(element).data("reveal-direction"));
+			const transform = $.extend({}, this.options.transform, $(element).data("reveal-transform"));
 
 			if(fadeIn) {
 				$(element).css({opacity: 0});
 			}
 			if(slide) {												
-				$(element).css({translate: [-direction.x, -direction.y]});
+				$(element).css({translate: [-transform.x, -transform.y], rotate: -transform.rotate + 'deg'});
 			}
 		});
 		$group.appear(() => {
@@ -66,19 +66,19 @@ class Reveal {
 	}
 
 	attachElement ($element) {
-		const fadeIn = getAttributeValue($(element), 'data-reveal-fade-in', this.options.fadeIn);
-		const slide = getAttributeValue($(element), 'data-reveal-slide', this.options.slide);
-		const direction = $.extend({}, this.options.direction, $(element).data("reveal-direction"));
+		const fadeIn = getAttributeValue($element, 'data-reveal-fade-in', this.options.fadeIn);
+		const slide = getAttributeValue($element, 'data-reveal-slide', this.options.slide);
+		const transform = $.extend({}, this.options.transform, $element.data("reveal-transform"));
 
 		if(fadeIn) {
-			$(element).css({opacity: 0});
+			$element.css({opacity: 0});
 		}
 		if(slide) {												
-			$(element).css({translate: [-direction.x, -direction.y]});
+			$element.css({translate: [-transform.x, -transform.y], rotate: -transform.rotate + 'deg'});
 		}
 		$element.appear(() => {
-			this.animateElement($(element));
-		},{accY: -options.offset});
+			this.animateElement($element);
+		},{accY: -this.options.offset});
 	}
 
 	animateGroup ($group) {
@@ -93,12 +93,12 @@ class Reveal {
 	}
 
 	animateElement ($element, groupOptions = {}) {
-		const duration = getAttributeValue($element, 'data-reveal-duration', groupOptions);
+		const duration = getAttributeValue($element, 'data-reveal-duration', this.options.duration);
 		const itemDelay = getAttributeValue($element, 'data-reveal-delay', groupOptions);
 		const delay = (groupOptions.delay || 0) + itemDelay;
 
 		let interval = setTimeout(() => {
-			$element.transition({opacity: '', translate: '0, 0'}, duration, 'ease');				
+			$element.transition({opacity: '', translate: '0, 0', rotate: 0}, duration, 'ease');				
 		}, delay);
 		
 	}
