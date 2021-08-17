@@ -30,14 +30,14 @@ class Reveal {
 
 		$container
 			.find(`[${ 'data-reveal-group' }]`)
-			.addBack(`[${ 'data-reveal-group' }]`)
+			// .addBack(`[${ 'data-reveal-group' }]`)
 			.each((_index, element) => {
 				this.attachGroup($(element));
 			});
 
 		$container
 			.find(`[${ 'data-reveal' }]`)
-			.addBack(`[${ 'data-reveal' }]`)
+			// .addBack(`[${ 'data-reveal' }]`)
 			.not(`[${ 'data-reveal-group' }] [${ 'data-reveal' }]`)
 			.each((_index, element) => {
 				this.attachElement($(element));
