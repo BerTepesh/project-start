@@ -15,7 +15,8 @@
 {% endblock %}
 
 {% block stylesheets %}
-<link rel="stylesheet" href="assets/stylesheets/page-list.min.css" />
+	<link rel="preload" as="style" href="assets/stylesheets/page-list.min.css"  onload="this.rel='stylesheet'" />
+	<noscript><link rel="stylesheet" href="assets/stylesheets/page-list.min.css"></noscript>
 {% endblock %}
 
 {% block javascripts %}

@@ -1,25 +1,25 @@
 @font-face {
-    $path-font-face: '../fonts/roboto/RobotoRegular/RobotoRegular';
-    font-family: 'Roboto';
-    src: local('Roboto'), url('#{$path-font-face}.woff') format('woff'), url('#{$path-font-face}.eot') format('eot'), url('#{$path-font-face}.ttf') format('truetype');
+    $path-font-face: '../fonts/NeoSans/NeoSansProCyr-Regular';
+    font-family: 'NeoSans';
+    src: local('NeoSans'), url('#{$path-font-face}.woff') format('woff'), url('#{$path-font-face}.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    $path-font-face: '../fonts/roboto/RobotoLight/RobotoLight';
-    font-family: 'Roboto';
-    src: local('Roboto'), url('#{$path-font-face}.woff') format('woff'), url('#{$path-font-face}.eot') format('eot'),url('#{$path-font-face}.ttf') format('truetype');
+    $path-font-face: '../fonts/NeoSans/NeoSansProCyr-Light';
+    font-family: 'NeoSans';
+    src: local('NeoSans'), url('#{$path-font-face}.woff') format('woff'), url('#{$path-font-face}.woff2') format('woff2');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    $path-font-face: '../fonts/roboto/RobotoBold/RobotoBold';
-    font-family: 'Roboto';
-    src: local('Roboto'), url('#{$path-font-face}.woff') format('woff'), url('#{$path-font-face}.eot') format('eot'),url('#{$path-font-face}.ttf') format('truetype');
+    $path-font-face: '../fonts/NeoSans/NeoSansProCyr-Bold';
+    font-family: 'NeoSans';
+    src: local('NeoSans'), url('#{$path-font-face}.woff') format('woff'), url('#{$path-font-face}.woff2') format('woff2');
     font-weight: bold;
     font-style: normal;
     font-display: swap;

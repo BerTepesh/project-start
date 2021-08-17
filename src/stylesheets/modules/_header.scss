@@ -18,6 +18,7 @@
 		margin-right: 20px;
 		color: #000;
 		transition: color .3s ease-in-out;
+		text-decoration: none;
 
 		svg {
 			max-width: 100%;
@@ -301,6 +302,7 @@
 	width: 30px;
 	height: 25px;
 	margin-left: 20px;
+	text-decoration: none;
 
 	@include media-breakpoint-up(md) {
 		display: none;
@@ -314,6 +316,7 @@
 		height: 100%;
 		transition: all .4s;
 		top: 0;
+		left: 0;
 		bottom: 0;
 		margin: auto 0;
 	}

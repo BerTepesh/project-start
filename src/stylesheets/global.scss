@@ -1,3 +1,5 @@
+@import "base/fonts";
+
 @import "~normalize-scss/sass/normalize/import-now";
 
 @import "bootstrap/bootstrap-grid";
@@ -5,7 +7,6 @@
 @import "imports";
 
 @import "base/base";
-@import "base/fonts";
 
 @import "modules/header";
 @import "modules/footer";
