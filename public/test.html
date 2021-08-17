@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en" class="no-js">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="Author" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+  <link rel="shortcut icon" href="favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/manifest/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/manifest/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/manifest/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/manifest/favicon-16x16.png">
+  <link rel="mask-icon" href="assets/manifest/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>Page test</title>
+  <meta name="description" content="" />
+  <script>
+    document.documentElement.classList.remove('no-js');
+    document.documentElement.classList.add('js');
+    if (document.documentElement.style.setProperty) {
+      document.documentElement.style.setProperty('--viewport-height', window.innerHeight + 'px');
+      document.documentElement.style.setProperty('--viewport-height-actual', window.innerHeight + 'px');
+    }
+  </script>
+  <link rel="stylesheet" href="assets/stylesheets/global.min.css" />
+  <link rel="stylesheet" href="assets/stylesheets/test.min.css" />
+</head>
+
+<body data-plugin="reveal" data-preload>
+  <div class="page-content-wrapper">
+    <div class="preloader">
+      <div class="preloader__loader"></div>
+    </div>
+    <header class="header header_sticky header_light">
+      <div class="container">
+        <div class="header__holder">
+          <a href="/" class="header__logo">
+            <svg class="icon icon-logo" width="50" height="50" role="presentation">
+              <use href="assets/images/icons.svg#logo" xlink:href="assets/images/icons.svg#logo"></use>
+            </svg>
+          </a>
+          <nav class="main-nav">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li class="has-children">
+                <span>Services</span>
+                <div class="sub-nav">
+                  <ul>
+                    <li><a href="#section0">Section0</a></li>
+                    <li><a href="#section1">Section1</a></li>
+                    <li><a href="#section2">Section2</a></li>
+                    <li><a href="#section3">Section3</a></li>
+                    <li><a href="#section4">Section4</a></li>
+                    <li><a href="#section5">Section5</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="active"><a href="test.html">Test</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </nav>
+          <div class="header__info">
+            <div class="header__phone">+7 9123456789</div>
+            <a href="mailto:project@mail.com">project@mail.com</a>
+          </div>
+          <a href="#" class="ham-trigger"></a>
+        </div>
+      </div>
+    </header>
+    <div class="ham-panel">
+      <div class="ham-panel__holder">
+        <nav class="ham-panel-nav">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li class="has-children">
+              <span>Sections</span>
+              <div class="sub-nav">
+                <ul>
+                  <li><a data-scroll href="#section0">Section0</a></li>
+                  <li><a data-scroll href="#section1">Section1</a></li>
+                  <li><a data-scroll href="#section2">Section2</a></li>
+                  <li><a data-scroll href="#section3">Section3</a></li>
+                  <li><a data-scroll href="#section4">Section4</a></li>
+                  <li><a data-scroll href="#section5">Section5</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="active"><a href="test.html">Test</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </nav>
+        <div class="ham-panel__info">
+          <div class="ham-panel__phone">+7 9123456789</div>
+          <a href="mailto:project@mail.com">project@mail.com</a>
+        </div>
+      </div>
+    </div>
+    <div class="page-content">
+      <main>
+        <div class="test">
+          <section data-scroll-target="#section0" class="test__section preface lazyload" data-bg="assets/images/test/back.jpg">
+            <div class="container">
+              <div class="preface__holder">
+                <h1 class="preface__title">Test</h1>
+                <div class="preface__subtitle">page</div>
+                <div class="preface__caption">
+                  <div class="preface__caption__border">
+                    <i></i><i></i>
+                  </div>
+                  <b>caption</b>
+                </div>
+                <div class="preface__btn">
+                  <a class="button button_size_xs popup-modal" data-fancybox data-src="#dialog-content"><span class="button__inner">ПОДРОБНЕЕ</span></a>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section data-scroll-target="#section1" class="test__section test__section_1">
+            <canvas id="canvas" class="test__canvas"></canvas>
+            <div class="container">
+              <div class="test__holder">
+                <div class="row">
+                  <div class="col-md-5">
+                    <div class="test__img">
+                      <img class="lazyload" data-src="assets/images/test/1-xl.jpg" alt="Section1">
+                    </div>
+                  </div>
+                  <div class="col-md-6 offset-md-1 test__content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a justo aliquet, vulputate ligula at, placerat est. Aenean in orci accumsan, commodo ante a, sodales nibh. Phasellus venenatis eu ipsum non lobortis. Donec vehicula enim a venenatis lacinia. Maecenas et pharetra diam, et imperdiet ante. </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <script>
+              const canvas = document.getElementById("canvas");
+              const c = canvas.getContext("2d");
+              // size of canvas
+              const imgSize = 512;
+              canvas.width = imgSize;
+              canvas.height = imgSize;
+              // init image data with black pixels
+              const image = c.createImageData(imgSize, imgSize);
+              for (let i = 0; i < image.data.length; i += 4) {
+                image.data[i] = 0; // R
+                image.data[i + 1] = 0; // G
+                image.data[i + 2] = 0; // B
+                image.data[i + 3] = 255; // A
+              }
+              // size of our height maps
+              const mapSize = 1024;
+              // returns the distance of point x,y from the origin 0,0
+              const distance = (x, y) => Math.sqrt(x * x + y * y);
+              // init height map 1
+              const heightMap1 = [];
+              for (let u = 0; u < mapSize; u++) {
+                for (let v = 0; v < mapSize; v++) {
+                  // index of coordinate in height map array
+                  const i = u * mapSize + v;
+                  // u,v are coordinates with origin at upper left corner
+                  // cx and cy are coordinates with origin at the
+                  // center of the map
+                  const cx = u - mapSize / 2;
+                  const cy = v - mapSize / 2;
+                  // distance from middle of map
+                  const d = distance(cx, cy);
+                  // stretching so we get the desired ripple density on our map
+                  const stretch = (3 * Math.PI) / (mapSize / 2);
+                  // wavy height value between -1 and 1
+                  const ripple = Math.sin(d * stretch);
+                  // wavy height value normalized to 0..1
+                  const normalized = (ripple + 1) / 2;
+                  // height map value 0..128, integer
+                  heightMap1[i] = Math.floor(normalized * 128);
+                }
+              }
+              const heightMap2 = [];
+              for (let u = 0; u < mapSize; u++) {
+                for (let v = 0; v < mapSize; v++) {
+                  const i = u * mapSize + v;
+                  const cx = u - mapSize / 2;
+                  const cy = v - mapSize / 2;
+                  // skewed distance as input to chaos field calculation,
+                  // scaled for smoothness over map distance
+                  const d1 = distance(0.8 * cx, 1.3 * cy) * 0.022;
+                  const d2 = distance(1.35 * cx, 0.45 * cy) * 0.022;
+                  const s = Math.sin(d1);
+                  const c = Math.cos(d2);
+                  // height value between -2 and +2
+                  const h = s + c;
+                  // height value between 0..1
+                  const normalized = (h + 2) / 4;
+                  // height value between 0..127, integer
+                  heightMap2[i] = Math.floor(normalized * 127);
+                }
+              }
+              // color helpers
+              const interpolate = (c1, c2, f) => {
+                return {
+                  r: Math.floor(c1.r + (c2.r - c1.r) * f),
+                  g: Math.floor(c1.g + (c2.g - c1.g) * f),
+                  b: Math.floor(c1.b + (c2.b - c1.b) * f)
+                };
+              };
+              // returns a random color
+              const randomColor = () => {
+                const rMin = 0,
+                  rMax = 30;
+                const gMin = 114,
+                  gMax = 250;
+                const bMin = 215,
+                  bMax = 255;
+                const r = Math.floor(Math.random() * (rMax - rMin + 1)) + rMin;
+                const g = Math.floor(Math.random() * (gMax - gMin + 1)) + gMin;
+                const b = Math.floor(Math.random() * (bMax - bMin + 1)) + bMin;
+                return {
+                  r,
+                  g,
+                  b
+                };
+              };
+              // returns a random color palette with 256 color entries
+              const makeRandomPalette = () => {
+                const c1 = randomColor();
+                const c2 = randomColor();
+                const c3 = randomColor();
+                const c4 = randomColor();
+                const c5 = randomColor();
+                return makeFiveColorGradient(c1, c2, c3, c4, c5);
+              };
+              const makeFiveColorGradient = (c1, c2, c3, c4, c5) => {
+                const g = [];
+                for (let i = 0; i < 64; i++) {
+                  const f = i / 64;
+                  g[i] = interpolate(c1, c2, f);
+                }
+                for (let i = 64; i < 128; i++) {
+                  const f = (i - 64) / 64;
+                  g[i] = interpolate(c2, c3, f);
+                }
+                for (let i = 128; i < 192; i++) {
+                  const f = (i - 128) / 64;
+                  g[i] = interpolate(c3, c4, f);
+                }
+                for (let i = 192; i < 256; i++) {
+                  const f = (i - 192) / 64;
+                  g[i] = interpolate(c4, c5, f);
+                }
+                return g;
+              };
+              // offsets for moving height maps
+              let dx1 = 0;
+              let dy1 = 0;
+              let dx2 = 0;
+              let dy2 = 0;
+              // adjust height maps offsets
+              const moveHeightMaps = t => {
+                dx1 = Math.floor(
+                  (((Math.cos(t * 0.0002 + 0.4 + Math.PI) + 1) / 2) * mapSize) / 2);
+                dy1 = Math.floor((((Math.cos(t * 0.0003 - 0.1) + 1) / 2) * mapSize) / 2);
+                dx2 = Math.floor((((Math.cos(t * -0.0002 + 1.2) + 1) / 2) * mapSize) / 2);
+                dy2 = Math.floor(
+                  (((Math.cos(t * -0.0003 - 0.8 + Math.PI) + 1) / 2) * mapSize) / 2);
+              };
+              // two palettes we interpolate between
+              const palettes = [makeRandomPalette(), makeRandomPalette()];
+              // current palette is edstablished durting animation
+              let palette = [];
+              // stores whether we're interpolating colors
+              // from palette 0 -> 1 (1) or 1 -> 0 (-1)
+              let prevtransform = 1;
+              const updatePalette = t => {
+                const timeScale = 0.0002;
+                const x = t * timeScale;
+                // normalized value 0..1 used to interpolate palette colors
+                const inter = (Math.cos(x) + 1) / 2;
+                // did we switch transform, and should ergo pick a new palette
+                // random palette to interpolate towards?
+                const transform = -Math.sin(x) >= 0 ? 1 : -1;
+                if (prevtransform != transform) {
+                  prevtransform = transform;
+                  if (transform == -1) {
+                    palettes[0] = makeRandomPalette();
+                  } else {
+                    palettes[1] = makeRandomPalette();
+                  }
+                }
+                // create interpolated palette for current frame
+                for (let i = 0; i < 256; i++) {
+                  palette[i] = interpolate(palettes[0][i], palettes[1][i], inter);
+                }
+              };
+              const updateImageData = () => {
+                for (let u = 0; u < imgSize; u++) {
+                  for (let v = 0; v < imgSize; v++) {
+                    // indexes into height maps for pixel
+                    const i = (u + dy1) * mapSize + (v + dx1);
+                    const k = (u + dy2) * mapSize + (v + dx2);
+                    // index for pixel in image data
+                    // remember it's 4 bytes per pixel
+                    const j = u * imgSize * 4 + v * 4;
+                    // height value of 0..255
+                    let h = heightMap1[i] + heightMap2[k];
+                    // get color value from current palette
+                    let c = palette[h];
+                    // h = heightMap2[i];
+                    // c = { r: h, g: h, b: h };
+                    // set pixel data
+                    image.data[j] = c.r;
+                    image.data[j + 1] = c.g;
+                    image.data[j + 2] = c.b;
+                  }
+                }
+              };
+              // helper to create a linear gradient palette
+              const linearGradient = (c1, c2) => {
+                const g = [];
+                // interpolate between the colors
+                // in the gradient
+                for (let i = 0; i < 256; i++) {
+                  const f = i / 255;
+                  g[i] = interpolate(c1, c2, f);
+                }
+                return g;
+              };
+              const tick = time => {
+                moveHeightMaps(time);
+                updatePalette(time);
+                updateImageData();
+                c.putImageData(image, 0, 0);
+                requestAnimationFrame(tick);
+              };
+              requestAnimationFrame(tick);
+            </script>
+          </section>
+          <section data-scroll-target="#section2" class="test__section test__section_2">
+            <div class="container">
+              <div class="test__holder">
+                <div class="slider" data-plugin="testSlider">
+                  <div class="slider__holder">
+                    <div class="slider__item" style="background-image: url('assets/images/test/4-xl.jpg');"></div>
+                    <div class="slider__item" style="background-image: url('assets/images/test/5-xl.jpg');"></div>
+                    <div class="slider__item" style="background-image: url('assets/images/test/3-xl.jpg');"></div>
+                  </div>
+                  <div class="slider__nav"></div>
+                </div>
+                <div class="slider" data-plugin="testSlider" data-test-slider-arrows="false" data-test-slider-dots="false">
+                  <div class="slider__holder">
+                    <div class="slider__item" style="background-image: url('assets/images/test/3-xl.jpg');"></div>
+                    <div class="slider__item" style="background-image: url('assets/images/test/2-xl.jpg');"></div>
+                    <div class="slider__item" style="background-image: url('assets/images/test/1-xl.jpg');"></div>
+                  </div>
+                  <div class="slider__nav"></div>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a justo aliquet, vulputate ligula at, placerat est. Aenean in orci accumsan, commodo ante a, sodales nibh. Phasellus venenatis eu ipsum non lobortis. Donec vehicula enim a venenatis lacinia. Maecenas et pharetra diam, et imperdiet ante. </p>
+              </div>
+            </div>
+          </section>
+          <section data-scroll-target="#section3" class="test__section test__section_3">
+            <div class="container">
+              <div class="test__holder" data-reveal-group data-reveal-group-delay="100">
+                <div class="row">
+                  <div class="col-md-5">
+                    <h2 class="test__title" data-reveal data-reveal-transform='{"x": 0, "y": 100}'>Services</h2>
+                    <div data-reveal data-reveal-delay="200" class="test__img">
+                      <img class="lazyload" data-src="assets/images/test/3-xl.jpg" alt="Section3">
+                    </div>
+                    <svg class="icon icon-social-youtube" width="20" height="20" role="presentation">
+                      <use href="assets/images/icons.svg#social-youtube" xlink:href="assets/images/icons.svg#social-youtube"></use>
+                    </svg>
+                  </div>
+                  <div class="col-md-6 offset-md-1">
+                    <p data-reveal data-reveal-delay="500" data-reveal-transform='{"x": -100, "y": 100, "rotate": -20}'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a justo aliquet, vulputate ligula at, placerat est. Aenean in orci accumsan, commodo ante a, sodales nibh. Phasellus venenatis eu ipsum non lobortis. Donec vehicula enim a venenatis lacinia. Maecenas et pharetra diam, et imperdiet ante. </p>
+                    <p data-reveal data-reveal-delay="700" data-reveal-transform='{"x": -100, "y": -100}'>Aliquam tempus consectetur dui a efficitur. Curabitur efficitur sem ac dignissim vulputate. In vel aliquam lorem. Etiam in nibh elementum, varius velit nec, vehicula purus. Class aptent taciti sociosqu ad </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section data-scroll-target="#section4" class="test__section test__section_4">
+            <div class="container">
+              <div class="test__holder">
+                <div class="row">
+                  <div data-reveal class="col-md-5">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a justo aliquet, vulputate ligula at, placerat est. Aenean in orci accumsan, commodo ante a, sodales nibh. Phasellus venenatis eu ipsum non lobortis. Donec vehicula enim a venenatis lacinia. Maecenas et pharetra diam, et imperdiet ante. </p>
+                    <p>Aliquam tempus consectetur dui a efficitur. Curabitur efficitur sem ac dignissim vulputate. In vel aliquam lorem. Etiam in nibh elementum, varius velit nec, vehicula purus. Class aptent taciti sociosqu ad </p>
+                  </div>
+                  <div class="col-md-6 offset-md-1">
+                    <h2 class="test__title">Test</h2>
+                    <div class="test__img">
+                      <img class="lazyload" data-src="assets/images/test/4-xl.jpg" alt="Section4">
+                    </div>
+                    <svg class="icon icon-social-youtube" width="20" height="20" role="presentation">
+                      <use href="assets/images/icons.svg#social-youtube" xlink:href="assets/images/icons.svg#social-youtube"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section data-scroll-target="#section5" class="test__section test__section_5">
+            <div class="container">
+              <div class="test__holder">
+                <div class="row">
+                  <div class="col-md-5">
+                    <h2 class="test__title">Contact Us</h2>
+                    <div class="test__img">
+                      <picture>
+                        <source data-srcset="assets/images/test/5-xs.jpg 240w " media="(max-width: 576px)" />
+                        <source data-srcset="assets/images/test/5-sm.jpg 576w" media="(max-width: 768px)" />
+                        <source data-srcset="assets/images/test/5-md.jpg 768w" media="(max-width: 992px)" />
+                        <source data-srcset="assets/images/test/5-lg.jpg 992w" media="(max-width: 1200px)" />
+                        <source data-srcset="assets/images/test/5-xl.jpg 1200w" />
+                        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/images/test/5-sm.jpg" class="lazyload" alt="Section5" />
+                      </picture>
+                    </div>
+                    <svg class="icon icon-social-youtube" width="20" height="20" role="presentation">
+                      <use href="assets/images/icons.svg#social-youtube" xlink:href="assets/images/icons.svg#social-youtube"></use>
+                    </svg>
+                  </div>
+                  <div class="col-md-6 offset-md-1">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a justo aliquet, vulputate ligula at, placerat est. Aenean in orci accumsan, commodo ante a, sodales nibh. Phasellus venenatis eu ipsum non lobortis. Donec vehicula enim a venenatis lacinia. Maecenas et pharetra diam, et imperdiet ante. </p>
+                    <p>Aliquam tempus consectetur dui a efficitur. Curabitur efficitur sem ac dignissim vulputate. In vel aliquam lorem. Etiam in nibh elementum, varius velit nec, vehicula purus. Class aptent taciti sociosqu ad </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+      </main>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__holder">
+            <a href="/" class="footer__logo">
+              <svg class="icon icon-logo" width="50" height="50" role="presentation">
+                <use href="assets/images/icons.svg#logo" xlink:href="assets/images/icons.svg#logo"></use>
+              </svg>
+            </a>
+            <nav class="footer-nav">
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="test.html">Test</a></li>
+                <li><a href="#">Contact Us</a></li>
+              </ul>
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="test.html">Test</a></li>
+                <li><a href="#">Contact Us</a></li>
+              </ul>
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="test.html">Test</a></li>
+                <li><a href="#">Contact Us</a></li>
+              </ul>
+            </nav>
+            <div class="footer__contacts">
+              <div class="footer__phone">+7 9123456789</div>
+              <a href="mailto:project@mail.com">project@mail.com</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <div class="js-modal">
+      <div id="dialog-content" style="display:none;">
+        <h2>Hello, world!</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a justo aliquet, vulputate ligula at, placerat est. Aenean in orci accumsan, commodo ante a, sodales nibh. Phasellus venenatis eu ipsum non lobortis. Donec vehicula enim a venenatis lacinia. Maecenas et pharetra diam, et imperdiet ante. </p>
+        <p>Aliquam tempus consectetur dui a efficitur. Curabitur efficitur sem ac dignissim vulputate. In vel aliquam lorem. Etiam in nibh elementum, varius velit nec, vehicula purus. Class aptent taciti sociosqu ad </p>
+      </div>
+    </div>
+  </div>
+  <script src="assets/javascripts/test.js"></script>
+</body>
+
+</html>
