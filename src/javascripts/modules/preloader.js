@@ -13,6 +13,7 @@ const loadData = new Promise(function (resolve) {
 		div.remove();
 		
 		$('.preloader__loader').css('right', scrollWidth);
+		$('.preloader').addClass('visible');
 
 		$('body').addClass('fixed');
 		
