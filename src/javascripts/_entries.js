@@ -7,6 +7,10 @@ module.exports = {
         'common/main.js',
     ],
 
+    'page-list':    [
+        'common/main.js',
+    ],
+
     'test':    [
         'common/main.js',
                 
