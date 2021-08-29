@@ -297,23 +297,28 @@
 			<section data-scroll-target="#section2" class="test__section test__section_2">
 				<div class="container">
 					<div class="test__holder">
-						<div class="slider" data-plugin="testSlider">
-							<div class="slider__holder">
-								<div class="slider__item" style="background-image: url('assets/images/test/4-xl.jpg');"></div>
-								<div class="slider__item" style="background-image: url('assets/images/test/2-xl.jpg');"></div>
-								<div class="slider__item" style="background-image: url('assets/images/test/3-xl.jpg');"></div>
-							</div>
-							<div class="slider__nav"></div>
+						<h2 class="test__title">Tabs</h2>
+						<div class="tabs" data-plugin="tabs" data-reveal-group>
+							<ul class="tabs__control" data-reveal>
+								<li><a href="#tab1" data-tabs-btn class="active">Слайдер</a></li>
+								<li><a href="#tab2" data-tabs-btn>Текст</a></li>
+							</ul>
+							<ul class="tabs__content">
+								<li data-tabs-content="tab1" class="active">
+									<div class="slider" data-plugin="testSlider">
+										<div class="slider__holder">
+											<div class="slider__item" style="background-image: url('assets/images/test/4-xl.jpg');"></div>
+											<div class="slider__item" style="background-image: url('assets/images/test/2-xl.jpg');"></div>
+											<div class="slider__item" style="background-image: url('assets/images/test/3-xl.jpg');"></div>
+										</div>
+										<div class="slider__nav"></div>
+									</div>
+								</li>
+								<li data-tabs-content="tab2">
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a justo aliquet, vulputate ligula at, placerat est. Aenean in orci accumsan, commodo ante a, sodales nibh. Phasellus venenatis eu ipsum non lobortis. Donec vehicula enim a venenatis lacinia. Maecenas et pharetra diam, et imperdiet ante. </p>
+								</li>
+							</ul>
 						</div>
-						<div class="slider" data-plugin="testSlider" data-test-slider-arrows="false" data-test-slider-dots="false">
-							<div class="slider__holder">
-								<div class="slider__item" style="background-image: url('assets/images/test/3-xl.jpg');"></div>
-								<div class="slider__item" style="background-image: url('assets/images/test/2-xl.jpg');"></div>
-								<div class="slider__item" style="background-image: url('assets/images/test/1-xl.jpg');"></div>
-							</div>
-							<div class="slider__nav"></div>
-						</div>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a justo aliquet, vulputate ligula at, placerat est. Aenean in orci accumsan, commodo ante a, sodales nibh. Phasellus venenatis eu ipsum non lobortis. Donec vehicula enim a venenatis lacinia. Maecenas et pharetra diam, et imperdiet ante. </p>
 					</div>
 				</div>
 			</section>

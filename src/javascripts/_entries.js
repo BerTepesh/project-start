@@ -13,6 +13,8 @@ module.exports = {
 
     'test':    [
         'common/main.js',
+
+        'components/tabs.js',
                 
         'modules/test/test-slider.js',
     ],

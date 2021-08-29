@@ -5,8 +5,13 @@ export default class Slider {
 
 	static get Defaults () {
 			return {
-					'arrows': false,
-					'dots': false
+				'arrows': false,
+				'dots': false,
+				'autoplay': false,
+				'autoplaySpeed': 2000,
+				'slidesToShow': 1,
+				'infinite': false,
+				'responsive': []
 			};
 	}
 
@@ -17,16 +22,17 @@ export default class Slider {
 		$container.find('.slider__holder').slick({
 			arrows: options.arrows,
 			dots: options.dots,
-			slidesToShow: 1,
+			slidesToShow: options.slidesToShow,
 			swipeToSlide: true,
-			infinite: false,
+			infinite: options.infinite,
 			accessibility: false,
-			autoplay: false,
-			autoplaySpeed: 2500,
+			autoplay: options.autoplay,
+			autoplaySpeed: options.autoplaySpeed,
 			speed: 900,
 			prevArrow: '<button type="button" class="prev"></button>',
 			nextArrow: '<button type="button" class="next"></button>',
-			appendArrows: $container.children('.slider__nav')
+			appendArrows: $container.children('.slider__nav'),
+			responsive: options.responsive
 		});
 	}
 

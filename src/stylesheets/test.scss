@@ -2,6 +2,7 @@
 
 @import "~slick-carousel/slick/slick";
 @import "components/slider";
+@import "components/tabs";
 
 @import "modules/test/slider";
 
@@ -29,6 +30,13 @@
 				padding-top: 82px;
 				height: 550px;
 			}
+		}
+
+		&_2 {
+			justify-content: flex-start;
+			height: auto;
+			min-height: 400px;
+			padding: 60px 0;
 		}
 
 		&_2,
