@@ -2,23 +2,22 @@
 	<div class="ham-panel__holder">
 		<nav class="ham-panel-nav">
 			<ul>
-				<li><a href="#">Home</a></li>
-				<li><a href="#">About Us</a></li>
-				<li class="has-children">
-					<span>Sections</span>
-					<div class="sub-nav">
-						<ul>
-							<li><a data-scroll href="#section0">Section0</a></li>
-							<li><a data-scroll href="#section1">Section1</a></li>
-							<li><a data-scroll href="#section2">Section2</a></li>
-							<li><a data-scroll href="#section3">Section3</a></li>
-							<li><a data-scroll href="#section4">Section4</a></li>
-							<li><a data-scroll href="#section5">Section5</a></li>
-						</ul>
-					</div>
-				</li>
-				<li {% if curPage == "test" %} class="active"{% endif %}><a href="test.html">Test</a></li>
-				<li><a href="#">Contact Us</a></li>
+				{% for item in navigation %}
+					{% if item.children|default(false) and item.children|length %}
+						<li class="has-children">
+							<span>{{ item.title }}</span>
+							<div class="sub-nav">
+								<ul>
+									{% for item in item.children %}
+										<li><a href="{{ item.url }}">{{ item.title }}</a></li>
+									{% endfor %}
+								</ul>
+							</div>
+						</li>
+					{% else %}
+						<li {% if curPageId == item.pageId %} class="active"{% endif %}><a href="{{ item.url }}">{{ item.title }}</a></li>
+					{% endif %}
+				{% endfor %}
 			</ul>
 		</nav>
 		<div class="ham-panel__info">

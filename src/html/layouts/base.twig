@@ -10,8 +10,6 @@
 	<link rel="icon" type="image/png" sizes="32x32" href="assets/manifest/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="192x192" href="assets/manifest/android-chrome-192x192.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="assets/manifest/favicon-16x16.png">
-	<link rel="mask-icon" href="assets/manifest/safari-pinned-tab.svg" color="#5bbad5">
-	<meta name="msapplication-TileColor" content="#da532c">
 	<meta name="theme-color" content="#ffffff">
   {% block meta %}{% endblock %}
   <title>{% block title %}Title{% endblock %}</title>
@@ -38,17 +36,65 @@
 </head>
 <body data-plugin="reveal" data-preload>
 	<div class="page-content-wrapper">
+		{% set navigation = [            
+			{
+					'title': 'Home',
+					'pageId': 'home',
+					'url': '/',
+			},
+			{
+					'title': 'Page list',
+					'pageId': 'pageList',
+					'url': 'page-list.html',
+			},
+			{
+					'title': 'Services',
+					'pageId': 'services',
+					'url': '#',
+					'children': [
+							{
+								'title': 'Services0',
+								'url': '#Services0',
+							},
+							{
+								'title': 'Services1',
+								'url': '#Services1',
+							},
+							{
+								'title': 'Services2',
+								'url': '#Services2',
+							},
+							{
+								'title': 'Services3',
+								'url': '#Services3',
+							},
+							{
+								'title': 'Services4',
+								'url': '#Services4',
+							},
+							{
+								'title': 'Services5',
+								'url': '#Services5',
+							},
+					]
+			},
+			{
+					'title': 'Test',
+					'pageId': 'test',
+					'url': 'test.html',
+			},
+		] %}	
 		<div class="preloader visible"><div class="preloader__loader"></div></div>
 		{% block header %}
-			{% include "../partials/header.twig" with { navigation: header.navigation } %}
+			{% include "../partials/header.twig" with { 'navigation': navigation } %}
 		{% endblock %}
-		{% include "../partials/ham-panel.twig" %}
+		{% include "../partials/ham-panel.twig" with { 'navigation': navigation } %}
 		<div class="page-content">
 				<main>
 					{% block body %}{% endblock %}
 				</main>
-				{% block footer %} 
-					{% include "../partials/footer.twig" %}
+				{% block footer %}  
+					{% include "../partials/footer.twig" with { 'navigation': navigation } %}
 				{% endblock %}
 		</div>
 		<div class="js-modal">

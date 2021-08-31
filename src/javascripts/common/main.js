@@ -14,7 +14,6 @@ import '../modules/smooth-scroll';
 import '../modules/modal';
 import '../modules/reveal';
 
-
 $(function() {
 	$('body').app();
 	svg4everybody();

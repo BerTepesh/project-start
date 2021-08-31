@@ -8,25 +8,19 @@
 				</a>
 				<nav class="footer-nav">
 					<ul>
-						<li><a href="#">Home</a></li>
-						<li><a href="#">About Us</a></li>
-						<li><a href="#">Services</a></li>
-						<li><a href="test.html">Test</a></li>
-						<li><a href="#">Contact Us</a></li>
+						{% for item in navigation %}
+							<li {% if curPageId == item.pageId %} class="active"{% endif %}><a href="{{ item.url }}">{{ item.title }}</a></li>
+						{% endfor %}
 					</ul>
 					<ul>
-						<li><a href="#">Home</a></li>
-						<li><a href="#">About Us</a></li>
-						<li><a href="#">Services</a></li>
-						<li><a href="test.html">Test</a></li>
-						<li><a href="#">Contact Us</a></li>
+						{% for item in navigation %}
+							<li {% if curPageId == item.pageId %} class="active"{% endif %}><a href="{{ item.url }}">{{ item.title }}</a></li>
+						{% endfor %}
 					</ul>
 					<ul>
-						<li><a href="#">Home</a></li>
-						<li><a href="#">About Us</a></li>
-						<li><a href="#">Services</a></li>
-						<li><a href="test.html">Test</a></li>
-						<li><a href="#">Contact Us</a></li>
+						{% for item in navigation %}
+							<li {% if curPageId == item.pageId %} class="active"{% endif %}><a href="{{ item.url }}">{{ item.title }}</a></li>
+						{% endfor %}
 					</ul>
 				</nav>
 				<div class="footer__contacts">
