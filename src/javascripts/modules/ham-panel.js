@@ -25,14 +25,14 @@ $(function(){
 		}
 	});
 
-	$('.ham-panel-nav li.has-children span').click(function() {
-		var submenu = $(this).closest('li').children('.sub-nav');
-		if ( $(submenu).is(':hidden') ) {
-			$(submenu).slideDown(300);	
-			$(this).closest('li').addClass('droped');
-		} else {
-			$(submenu).slideUp(300);
-			$(this).closest('li').removeClass('droped');
-		}
-	});
+	// $('.ham-panel-nav li.has-children span').click(function() {
+	// 	var submenu = $(this).closest('li').children('.sub-nav');
+	// 	if ( $(submenu).is(':hidden') ) {
+	// 		$(submenu).slideDown(300);	
+	// 		$(this).closest('li').addClass('droped');
+	// 	} else {
+	// 		$(submenu).slideUp(300);
+	// 		$(this).closest('li').removeClass('droped');
+	// 	}
+	// });
 });

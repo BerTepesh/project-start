@@ -57,6 +57,14 @@ img[draggable="false"] {
     -webkit-user-drag: none;
 }
 
+.container {
+    margin: 0 auto;
+    display: block;
+    padding: 0 20px;
+    width: 100%;
+    @include make-max-widths-container-width();
+}
+
 .page-content-wrapper {
     min-width: 320px;
     overflow: hidden;

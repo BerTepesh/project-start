@@ -10,7 +10,10 @@ export default class Slider {
 				'autoplay': false,
 				'autoplaySpeed': 2000,
 				'slidesToShow': 1,
+				'slidesToScroll': 1,
 				'infinite': false,
+				'fade': false,
+				'asNavFor': '',
 				'responsive': []
 			};
 	}
@@ -21,19 +24,24 @@ export default class Slider {
 
 		$container.find('.slider__holder').slick({
 			arrows: options.arrows,
+			fade: options.fade,
 			dots: options.dots,
+			appendDots: $container.find('.slider__dots'),
 			slidesToShow: options.slidesToShow,
+			slidesToScroll: options.slidesToScroll,
 			swipeToSlide: true,
 			infinite: options.infinite,
 			accessibility: false,
 			autoplay: options.autoplay,
 			autoplaySpeed: options.autoplaySpeed,
 			speed: 900,
+			asNavFor: options.asNavFor,
 			prevArrow: '<button type="button" class="prev"></button>',
 			nextArrow: '<button type="button" class="next"></button>',
-			appendArrows: $container.children('.slider__nav'),
+			appendArrows: $container.find('.slider__nav'),
 			responsive: options.responsive
 		});
+
 	}
 
 	init () {

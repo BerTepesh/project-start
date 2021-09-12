@@ -13,6 +13,14 @@ import '../modules/ham-panel';
 import '../modules/smooth-scroll';
 import '../modules/modal';
 import '../modules/reveal';
+import '../modules/validation';
+
+import '../components/dropdown';
+
+import '../modules/test/test-slider';
+
+import '../components/tabs';
+
 
 $(function() {
 	$('body').app();

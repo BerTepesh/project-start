@@ -3,7 +3,7 @@
 
 {% set headerAttrs = {
 	'class': 'header_light'
-} %}d
+} %}
 
 {% set curPageId = 'test' %}
 
@@ -416,12 +416,11 @@
 {% endblock %}
 
 {% block stylesheets %}
-	<link rel="preload" as="style" href="assets/stylesheets/test.min.css"  onload="this.rel='stylesheet'" />
-	<noscript><link rel="stylesheet" href="assets/stylesheets/test.min.css"></noscript>
+	<link rel="stylesheet" href="assets/stylesheets/test.min.css">
 {% endblock %}
 
 {% block javascripts %}
-    <script src="assets/javascripts/test.js"></script>
+ 
 {% endblock %}
 
 
