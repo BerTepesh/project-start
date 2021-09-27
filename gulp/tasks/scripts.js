@@ -9,13 +9,18 @@ module.exports = function scripts(done) {
     const [key, value] = entry;
 
     let pathArr = value.map(el=> paths.src.scripts + el);
+
+    pathArr.unshift('/src/javascripts/prepend.js');
+    pathArr.push('/src/javascripts/append.js');
     
     webpackStream({
-      entry: pathArr,
+      entry: {
+        app: pathArr 
+      },
       output: {
         filename: `${key}.js`
       },
-      mode: "development",
+      mode: "production",
     })
     .pipe(plumber())
     .pipe(gulp.dest(paths.build.scripts))
