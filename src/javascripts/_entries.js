@@ -1,11 +1,13 @@
 module.exports = {
-    'index':    [
+    'main':    [
+        'prepend',
+
         'common/main',
 
         'append',
     ],
     'test':    [
-        'common/main',
+        'prepend',
         
         'modules/test/test-slider',
         'components/tabs',

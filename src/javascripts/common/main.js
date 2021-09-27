@@ -1,6 +1,3 @@
-import $ from 'jquery';
-
-import 'jquery-app';
 import 'lazysizes';
 
 import 'lazysizes/plugins/parent-fit/ls.parent-fit';
